@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//tanshizw.com">
-  <title>Ninja JavaScript Part 1 | 迎风布阵 逆水行舟</title>
+  <title>Ninja Javascript Part 2 | 迎风布阵 逆水行舟</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="函数参数以及形参 如果实际传递参数大于形参数量，超出的参数不会给予形参名称，但是依然能够通过其它方式获取到 如果形参数量大于实际传递参数数量，那么没有对应实际参数的形参会赋值为undefine 所有的函数调用都会默认传递2个隐式参数：arguments、this。   arguments拥有length属性的类数组（实际上不是）可以通过arguments[2]取到第3个参数; this参数引用了，">
+  <meta name="description" content="闭包闭包是一个函数在创建时允许该自身函数访问并操作该自身函数之外的变量时所创建的作用域。 闭包可以让函数访问所有的变量和函数，只要这些变量和函数存在与该函数声明时的作用域内就行。 闭包的用法 封装私有变量  12345678910111213141516function Ninja() &amp;#123;    var feints = 0;    this.getFeints = function()">
 <meta name="keywords">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ninja JavaScript Part 1">
-<meta property="og:url" content="//tanshizw.com/2017/11/09/Ninja-JavaScript-Part-1/index.html">
+<meta property="og:title" content="Ninja Javascript Part 2">
+<meta property="og:url" content="//tanshizw.com/2017/11/10/Ninja-Javascript-Part-2/index.html">
 <meta property="og:site_name" content="迎风布阵 逆水行舟">
-<meta property="og:description" content="函数参数以及形参 如果实际传递参数大于形参数量，超出的参数不会给予形参名称，但是依然能够通过其它方式获取到 如果形参数量大于实际传递参数数量，那么没有对应实际参数的形参会赋值为undefine 所有的函数调用都会默认传递2个隐式参数：arguments、this。   arguments拥有length属性的类数组（实际上不是）可以通过arguments[2]取到第3个参数; this参数引用了，">
-<meta property="og:updated_time" content="2017-11-09T06:53:14.000Z">
+<meta property="og:description" content="闭包闭包是一个函数在创建时允许该自身函数访问并操作该自身函数之外的变量时所创建的作用域。 闭包可以让函数访问所有的变量和函数，只要这些变量和函数存在与该函数声明时的作用域内就行。 闭包的用法 封装私有变量  12345678910111213141516function Ninja() &amp;#123;    var feints = 0;    this.getFeints = function()">
+<meta property="og:updated_time" content="2017-11-10T11:12:14.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ninja JavaScript Part 1">
-<meta name="twitter:description" content="函数参数以及形参 如果实际传递参数大于形参数量，超出的参数不会给予形参名称，但是依然能够通过其它方式获取到 如果形参数量大于实际传递参数数量，那么没有对应实际参数的形参会赋值为undefine 所有的函数调用都会默认传递2个隐式参数：arguments、this。   arguments拥有length属性的类数组（实际上不是）可以通过arguments[2]取到第3个参数; this参数引用了，">
+<meta name="twitter:title" content="Ninja Javascript Part 2">
+<meta name="twitter:description" content="闭包闭包是一个函数在创建时允许该自身函数访问并操作该自身函数之外的变量时所创建的作用域。 闭包可以让函数访问所有的变量和函数，只要这些变量和函数存在与该函数声明时的作用域内就行。 闭包的用法 封装私有变量  12345678910111213141516function Ninja() &amp;#123;    var feints = 0;    this.getFeints = function()">
   
     <link rel="alternative" href="/atom.xml" title="迎风布阵 逆水行舟" type="application/atom+xml">
   
@@ -146,59 +146,33 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Ninja-JavaScript-Part-1" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Ninja-Javascript-Part-2" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Ninja JavaScript Part 1
+      Ninja Javascript Part 2
     </h1>
   
 
         
-        <a href="/2017/11/09/Ninja-JavaScript-Part-1/" class="archive-article-date">
-  	<time datetime="2017-11-09T06:48:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-09</time>
+        <a href="/2017/11/10/Ninja-Javascript-Part-2/" class="archive-article-date">
+  	<time datetime="2017-11-10T11:11:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-10</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h6 id="函数参数以及形参"><a href="#函数参数以及形参" class="headerlink" title="函数参数以及形参"></a>函数参数以及形参</h6><ul>
-<li>如果实际传递参数大于形参数量，超出的参数不会给予形参名称，但是依然能够通过其它方式获取到</li>
-<li>如果形参数量大于实际传递参数数量，那么没有对应实际参数的形参会赋值为undefine</li>
-<li>所有的函数调用都会默认传递2个隐式参数：arguments、this。</li>
-</ul>
-<ol>
-<li>arguments拥有length属性的类数组（实际上不是）可以通过arguments[2]取到第3个参数;</li>
-<li>this参数引用了，与该函数调用时进行隐式关联的一个对象，被称为函数上下文。</li>
+        <h6 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h6><p>闭包是一个函数在创建时允许该自身函数访问并操作该自身函数之外的变量时所创建的作用域。</p>
+<p>闭包可以让函数访问所有的变量和函数，只要这些变量和函数存在与该函数声明时的作用域内就行。</p>
+<h6 id="闭包的用法"><a href="#闭包的用法" class="headerlink" title="闭包的用法"></a>闭包的用法</h6><ol>
+<li>封装私有变量</li>
 </ol>
-<h6 id="函数作为构造器调用"><a href="#函数作为构造器调用" class="headerlink" title="函数作为构造器调用"></a>函数作为构造器调用</h6><ul>
-<li>调用方式：new function();</li>
-<li>调用时内部行为：</li>
-</ul>
-<ol>
-<li>创建一个空对象</li>
-<li>传递给构造器的对象是this参数，从而成为构造器的函数上下文</li>
-<li>如果没有显式的返回值，那么新创建的对象则作为构造器的返回值返回</li>
-</ol>
-<h6 id="函数的apply和call方法"><a href="#函数的apply和call方法" class="headerlink" title="函数的apply和call方法"></a>函数的apply和call方法</h6><p>JavaScript 任何一个函数都有apply() 和call() 方法，二者都可以显式的指定任何一个对象作为其函数的上下文。</p>
-<ul>
-<li>func.apply(obj, [1,2,3]);</li>
-<li>func.call(obj, 1, 2, 3);</li>
-<li>也可以在callback中指定函数上下文: callback.call(obj, n)</li>
-</ul>
-<h6 id="自记忆函数"><a href="#自记忆函数" class="headerlink" title="自记忆函数"></a>自记忆函数</h6><p>memorization, 能够记住先前的计算结果，以显著的提高性能。</p>
-<ul>
-<li>记忆之前计算出的值</li>
-<li>缓存记忆DOM元素</li>
-</ul>
-<figure class="highlight fortran"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span></span> getElements(<span class="keyword">name</span>) &#123;</div><div class="line">    <span class="keyword">if</span> (<span class="comment">!getElements.cache) &#123;</span></div><div class="line">        getElements.cache = &#123;&#125;;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> getElements.cache[<span class="keyword">name</span>] =</div><div class="line">        getElements.cache[<span class="keyword">name</span>] || document.getElementsByTagName(<span class="keyword">name</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h6 id="控制传递函数上下文"><a href="#控制传递函数上下文" class="headerlink" title="控制传递函数上下文"></a>控制传递函数上下文</h6><p>函数调用时，通过控制传递函数上下文，在当前对象上执行当前对象没有的方法。例如利用Array或Math上已有的方法，在自定义的数据上进行操作。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">multiMax</span>(<span class="params">multi</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> multi * <span class="built_in">Math</span>.max.apply(<span class="built_in">Math</span>, <span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>, <span class="number">1</span>));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>欺骗Array.prototype.slice方法，将其在arguments列表上使用，arguments参数列表并不是一个真正的数组。</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Ninja</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">var</span> feints = <span class="number">0</span>;</div><div class="line">    <span class="keyword">this</span>.getFeints = <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> feints;</div><div class="line">    &#125;;</div><div class="line">    </div><div class="line">    <span class="keyword">this</span>.feints = <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</div><div class="line">        feinits++;</div><div class="line">    &#125;;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> ninja = <span class="keyword">new</span> Ninja();</div><div class="line">ninja.feints();</div><div class="line"></div><div class="line">ninja.getFeints();<span class="comment">//1</span></div><div class="line">ninja.feints;<span class="comment">//undefine</span></div></pre></td></tr></table></figure>
+<h6 id="通过闭包实现缓存记忆"><a href="#通过闭包实现缓存记忆" class="headerlink" title="通过闭包实现缓存记忆"></a>通过闭包实现缓存记忆</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 查询缓存</span></div><div class="line"><span class="built_in">Function</span>.prototype.memoized = <span class="function"><span class="keyword">function</span>(<span class="params">key</span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>._values = <span class="keyword">this</span>._values || &#123;&#125;;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>._values[key] !== <span class="literal">undefined</span> ?</div><div class="line">    <span class="keyword">this</span>._values[key] :</div><div class="line">    <span class="keyword">this</span>._values[key] = <span class="keyword">this</span>.apply(<span class="keyword">this</span>, <span class="built_in">arguments</span>);</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="comment">// 封装函数，并且通过闭包把上下文保留下来</span></div><div class="line"><span class="built_in">Function</span>.prototype.memoize = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> fn = <span class="keyword">this</span>;</div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> fn.memoized.apply(fn, <span class="built_in">arguments</span>);</div><div class="line">    &#125;;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> isPrime = (<span class="function"><span class="keyword">function</span>(<span class="params">num</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> prime = num !== <span class="number">1</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">2</span>; i &lt; num; i++) &#123;</div><div class="line">        <span class="keyword">if</span> (num % i === <span class="number">0</span>) &#123;</div><div class="line">            prime = <span class="literal">false</span>;</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> prime;</div><div class="line">&#125;).memoize();</div><div class="line"></div><div class="line">assert(isPrime(<span class="number">17</span>), <span class="string">"17 is prime"</span>);</div></pre></td></tr></table></figure>
 
       
 
@@ -288,7 +262,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://tanshizw.com/2017/11/09/Ninja-JavaScript-Part-1/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://tanshizw.com/2017/11/10/Ninja-Javascript-Part-2/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -302,20 +276,15 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/05/15/tip1/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/11/09/Ninja-JavaScript-Part-1/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          No child processes compile error
+          Ninja JavaScript Part 1
         
       </div>
     </a>
   
-  
-    <a href="/2017/11/10/Ninja-Javascript-Part-2/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Ninja Javascript Part 2</div>
-      <i class="icon-circle-right"></i>
-    </a>
   
 </nav>
 
