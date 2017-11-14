@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//tanshizw.com">
-  <title>迎风布阵 逆水行舟</title>
+  <title>Ninja Javascript Part 3 | 迎风布阵 逆水行舟</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="迎风布阵 逆水行舟">
-<meta property="og:url" content="//tanshizw.com/index.html">
+  <meta name="description" content="实例属性的优先级 通过原型给对象实例添加的属性 在构造器函数内给对象的实例添加的属性  在构造器内绑定的操作的优先级永远都高于在原型上绑定的操作优先级，因为构造器的this上下文指向的是实例自身。 查询属性引用时，首先查询对象自身，如果不存在，再去原型上查找，如果还是不存在，那么返回undefine。 原型链例如: 忍者是一个人，人又是一个哺乳动物，哺乳动物又是动物的一种…直到最终的是一个Obje">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ninja Javascript Part 3">
+<meta property="og:url" content="//tanshizw.com/2017/11/14/Ninja-Javascript-Part-3/index.html">
 <meta property="og:site_name" content="迎风布阵 逆水行舟">
+<meta property="og:description" content="实例属性的优先级 通过原型给对象实例添加的属性 在构造器函数内给对象的实例添加的属性  在构造器内绑定的操作的优先级永远都高于在原型上绑定的操作优先级，因为构造器的this上下文指向的是实例自身。 查询属性引用时，首先查询对象自身，如果不存在，再去原型上查找，如果还是不存在，那么返回undefine。 原型链例如: 忍者是一个人，人又是一个哺乳动物，哺乳动物又是动物的一种…直到最终的是一个Obje">
+<meta property="og:updated_time" content="2017-11-14T11:18:12.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="迎风布阵 逆水行舟">
+<meta name="twitter:title" content="Ninja Javascript Part 3">
+<meta name="twitter:description" content="实例属性的优先级 通过原型给对象实例添加的属性 在构造器函数内给对象的实例添加的属性  在构造器内绑定的操作的优先级永远都高于在原型上绑定的操作优先级，因为构造器的this上下文指向的是实例自身。 查询属性引用时，首先查询对象自身，如果不存在，再去原型上查找，如果还是不存在，那么返回undefine。 原型链例如: 忍者是一个人，人又是一个哺乳动物，哺乳动物又是动物的一种…直到最终的是一个Obje">
   
     <link rel="alternative" href="/atom.xml" title="迎风布阵 逆水行舟" type="application/atom+xml">
   
@@ -141,16 +146,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-Ninja-Javascript-Part-3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-Ninja-Javascript-Part-3" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/14/Ninja-Javascript-Part-3/">Ninja Javascript Part 3</a>
+    <h1 class="article-title" itemprop="name">
+      Ninja Javascript Part 3
     </h1>
   
 
@@ -176,77 +179,36 @@
       
 
       
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/14/Ninja-Javascript-Part-3/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-Ninja-Javascript-Part-2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/10/Ninja-Javascript-Part-2/">Ninja Javascript Part 2</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/10/Ninja-Javascript-Part-2/" class="archive-article-date">
-  	<time datetime="2017-11-10T11:11:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h6 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h6><p>闭包是一个函数在创建时允许该自身函数访问并操作该自身函数之外的变量时所创建的作用域。</p>
-<p>闭包可以让函数访问所有的变量和函数，只要这些变量和函数存在与该函数声明时的作用域内就行。</p>
-<h6 id="闭包的用法"><a href="#闭包的用法" class="headerlink" title="闭包的用法"></a>闭包的用法</h6><ol>
-<li>封装私有变量</li>
-</ol>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Ninja</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">var</span> feints = <span class="number">0</span>;</div><div class="line">    <span class="keyword">this</span>.getFeints = <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> feints;</div><div class="line">    &#125;;</div><div class="line">    </div><div class="line">    <span class="keyword">this</span>.feints = <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</div><div class="line">        feinits++;</div><div class="line">    &#125;;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> ninja = <span class="keyword">new</span> Ninja();</div><div class="line">ninja.feints();</div><div class="line"></div><div class="line">ninja.getFeints();<span class="comment">//1</span></div><div class="line">ninja.feints;<span class="comment">//undefine</span></div></pre></td></tr></table></figure>
-<h6 id="通过闭包实现缓存记忆"><a href="#通过闭包实现缓存记忆" class="headerlink" title="通过闭包实现缓存记忆"></a>通过闭包实现缓存记忆</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 查询缓存</span></div><div class="line"><span class="built_in">Function</span>.prototype.memoized = <span class="function"><span class="keyword">function</span>(<span class="params">key</span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>._values = <span class="keyword">this</span>._values || &#123;&#125;;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>._values[key] !== <span class="literal">undefined</span> ?</div><div class="line">    <span class="keyword">this</span>._values[key] :</div><div class="line">    <span class="keyword">this</span>._values[key] = <span class="keyword">this</span>.apply(<span class="keyword">this</span>, <span class="built_in">arguments</span>);</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="comment">// 封装函数，并且通过闭包把上下文保留下来</span></div><div class="line"><span class="built_in">Function</span>.prototype.memoize = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> fn = <span class="keyword">this</span>;</div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> fn.memoized.apply(fn, <span class="built_in">arguments</span>);</div><div class="line">    &#125;;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> isPrime = (<span class="function"><span class="keyword">function</span>(<span class="params">num</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> prime = num !== <span class="number">1</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">2</span>; i &lt; num; i++) &#123;</div><div class="line">        <span class="keyword">if</span> (num % i === <span class="number">0</span>) &#123;</div><div class="line">            prime = <span class="literal">false</span>;</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> prime;</div><div class="line">&#125;).memoize();</div><div class="line"></div><div class="line">assert(isPrime(<span class="number">17</span>), <span class="string">"17 is prime"</span>);</div></pre></td></tr></table></figure>
-<h6 id="即时函数"><a href="#即时函数" class="headerlink" title="即时函数"></a>即时函数</h6><p>代码模式:<br><figure class="highlight clojure"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(<span class="name">function</span>()&#123;&#125;)()<span class="comment">;</span></div></pre></td></tr></table></figure></p>
-<ul>
-<li>第一组圆括号作用是用于划定表达式的范围</li>
-<li>第二组圆括号则是一个操作符</li>
-<li>第一组圆括号内直接是使用的是匿名函数</li>
-</ul>
-<p>这段代码执行的操作:</p>
-<ol>
-<li>创建一个函数的实例</li>
-<li>执行该函数</li>
-<li>销毁该函数，因为语句结束后没有任何引用了</li>
-</ol>
-<h6 id="类库包装"><a href="#类库包装" class="headerlink" title="类库包装"></a>类库包装</h6><p>不希望一些不必要的变量去污染全局命名空间，尤其时那些零时变量，利用闭包和即时函数封装类库，使它尽可能的私有，并且选择性的暴露一些变量到全局空间。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> jQuery = <span class="built_in">window</span>.jQuery = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="comment">// initialize</span></div><div class="line">    &#125;;</div><div class="line">    <span class="comment">// ...</span></div><div class="line">&#125;)();</div></pre></td></tr></table></figure>
-<p>首先jQuery构造器(匿名函数)赋值给了window.jQuery,使其作为全局变量，然后将其赋值给了一个局部变量jQuery，强制让它保持在即时函数的作用域内。在即时函数的创建的世界中，名称jQuery的意义就是我们所期望的。</p>
-<p>另一种实现方式:<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> jQuery = (<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jQuery</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="comment">// initialize</span></div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="comment">// ...</span></div><div class="line">    <span class="keyword">return</span> jQuery;</div><div class="line">&#125;)();</div></pre></td></tr></table></figure></p>
-<p>首先在匿名函数的作用域中定义了jQuery函数，它可以自由存在于匿名函数的作用域中，然后将其返回并且赋值给一个名为jQuery全局变量，通常只输出一个变量时优先使用这种方式。</p>
-<h6 id="偏应用函数？重载函数？"><a href="#偏应用函数？重载函数？" class="headerlink" title="偏应用函数？重载函数？"></a>偏应用函数？重载函数？</h6><p>Todo</p>
-
-      
-
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/avatar.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/avatar.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -255,377 +217,89 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/10/Ninja-Javascript-Part-2/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://tanshizw.com/2017/11/14/Ninja-Javascript-Part-3/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-
-
-
-
   
-    <article id="post-Ninja-JavaScript-Part-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
+<nav id="article-nav">
+  
+    <a href="/2017/11/10/Ninja-Javascript-Part-2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/09/Ninja-JavaScript-Part-1/">Ninja JavaScript Part 1</a>
-    </h1>
-  
-
+          Ninja Javascript Part 2
         
-        <a href="/2017/11/09/Ninja-JavaScript-Part-1/" class="archive-article-date">
-  	<time datetime="2017-11-09T06:48:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h6 id="函数参数以及形参"><a href="#函数参数以及形参" class="headerlink" title="函数参数以及形参"></a>函数参数以及形参</h6><ul>
-<li>如果实际传递参数大于形参数量，超出的参数不会给予形参名称，但是依然能够通过其它方式获取到</li>
-<li>如果形参数量大于实际传递参数数量，那么没有对应实际参数的形参会赋值为undefine</li>
-<li>所有的函数调用都会默认传递2个隐式参数：arguments、this。</li>
-</ul>
-<ol>
-<li>arguments拥有length属性的类数组（实际上不是）可以通过arguments[2]取到第3个参数;</li>
-<li>this参数引用了，与该函数调用时进行隐式关联的一个对象，被称为函数上下文。</li>
-</ol>
-<h6 id="函数作为构造器调用"><a href="#函数作为构造器调用" class="headerlink" title="函数作为构造器调用"></a>函数作为构造器调用</h6><ul>
-<li>调用方式：new function();</li>
-<li>调用时内部行为：</li>
-</ul>
-<ol>
-<li>创建一个空对象</li>
-<li>传递给构造器的对象是this参数，从而成为构造器的函数上下文</li>
-<li>如果没有显式的返回值，那么新创建的对象则作为构造器的返回值返回</li>
-</ol>
-<h6 id="函数的apply和call方法"><a href="#函数的apply和call方法" class="headerlink" title="函数的apply和call方法"></a>函数的apply和call方法</h6><p>JavaScript 任何一个函数都有apply() 和call() 方法，二者都可以显式的指定任何一个对象作为其函数的上下文。</p>
-<ul>
-<li>func.apply(obj, [1,2,3]);</li>
-<li>func.call(obj, 1, 2, 3);</li>
-<li>也可以在callback中指定函数上下文: callback.call(obj, n)</li>
-</ul>
-<h6 id="自记忆函数"><a href="#自记忆函数" class="headerlink" title="自记忆函数"></a>自记忆函数</h6><p>memorization, 能够记住先前的计算结果，以显著的提高性能。</p>
-<ul>
-<li>记忆之前计算出的值</li>
-<li>缓存记忆DOM元素</li>
-</ul>
-<figure class="highlight fortran"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span></span> getElements(<span class="keyword">name</span>) &#123;</div><div class="line">    <span class="keyword">if</span> (<span class="comment">!getElements.cache) &#123;</span></div><div class="line">        getElements.cache = &#123;&#125;;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> getElements.cache[<span class="keyword">name</span>] =</div><div class="line">        getElements.cache[<span class="keyword">name</span>] || document.getElementsByTagName(<span class="keyword">name</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h6 id="控制传递函数上下文"><a href="#控制传递函数上下文" class="headerlink" title="控制传递函数上下文"></a>控制传递函数上下文</h6><p>函数调用时，通过控制传递函数上下文，在当前对象上执行当前对象没有的方法。例如利用Array或Math上已有的方法，在自定义的数据上进行操作。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">multiMax</span>(<span class="params">multi</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> multi * <span class="built_in">Math</span>.max.apply(<span class="built_in">Math</span>, <span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>, <span class="number">1</span>));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>欺骗Array.prototype.slice方法，将其在arguments列表上使用，arguments参数列表并不是一个真正的数组。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/09/Ninja-JavaScript-Part-1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
+      </div>
+    </a>
+  
+  
+</nav>
 
 
 
 
 
   
-    <article id="post-tip1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/15/tip1/">No child processes compile error</a>
-    </h1>
   
 
-        
-        <a href="/2017/05/15/tip1/" class="archive-article-date">
-  	<time datetime="2017-05-15T08:29:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>no child processes…</p>
-<p>现象描述：-j1 单线程编译能够通过，多线程-j8 或其它概率性不能通过，出现上面的报错。</p>
-<p>解决方法：jdk版本不对，Ubuntu16.04应该用openjdk8</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/15/tip1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-find_missing_libs_cause_compile_error" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/15/find_missing_libs_cause_compile_error/">编译系统找不到某个lib.so库时，便捷寻找方法</a>
-    </h1>
   
 
-        
-        <a href="/2017/05/15/find_missing_libs_cause_compile_error/" class="archive-article-date">
-  	<time datetime="2017-05-15T06:01:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Install apt-file:<br>  <pre><code><br>    sudo apt-get install apt-file<br>    apt-file update<br>    apt-file search libXext.so.6<br>  </code></pre></p>
-<p>libxext6: /usr/lib/x86_64-linux-gnu/libXext.so.6<br>libxext6: /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0<br>libxext6-dbg: /usr/lib/debug/usr/lib/x86_64-linux-gnu/libXext.so.6.4.0</p>
-<p>So:<br>  <pre><code><br>    sudo apt-get install  libxext6<br>  </code></pre></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/15/find_missing_libs_cause_compile_error/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-Unable-to-run-mksdcard-SDK-tool" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/15/Unable-to-run-mksdcard-SDK-tool/">Android studio不兼容本地的SDK工具(error by mksdcard)</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/15/Unable-to-run-mksdcard-SDK-tool/" class="archive-article-date">
-  	<time datetime="2017-05-15T06:00:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Download the source from here: <a href="https://github.com/miracle2k/android-platform_sdk/blob/master/emulator/mksdcard/mksdcard.c" target="_blank" rel="external">https://github.com/miracle2k/android-platform_sdk/blob/master/emulator/mksdcard/mksdcard.c</a><br>Then simply compile with “gcc mksdcard.c -o mksdcard”<br>Backup mksdcard in the SDK tools subfolder and replace with the newly compiled one<br>Then Android Studio will now be happy with your SDK</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/15/Unable-to-run-mksdcard-SDK-tool/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-xp-virtualbox" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/15/xp-virtualbox/">Ubuntu上使用virtualbox安装windowsXP虚拟机</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/15/xp-virtualbox/" class="archive-article-date">
-  	<time datetime="2017-05-15T05:59:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="安装-virtualbox"><a href="#安装-virtualbox" class="headerlink" title="安装 virtualbox"></a>安装 virtualbox</h2><h3 id="下载正确的版本"><a href="#下载正确的版本" class="headerlink" title="下载正确的版本"></a>下载正确的版本</h3><p>了解自己的Ubuntu<br>  <pre><code><br>    lsb_release -a<br>    uname -a<br>  </code></pre><br>命令1 获得ubuntu系统版本 12.04,14.04等<br>命令2 获得系统位数x86_64,i386等<br>根据自己的电脑系统选择正确的安装包，AMD64是指64位系统和AMD无关，I386是指32位系统和inter芯片无关.<br>例如我的电脑是:</p>
-<blockquote>
-<p>Distributor ID: Ubuntu<br>Description:  Ubuntu 14.04.4 LTS<br>Release:  14.04<br>Codename: trusty<br>x86_64 GNU/Linux</p>
-</blockquote>
-<p>那么我选择的是: Ubuntu 14.04 (“Trusty”) AMD64</p>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>双击安装包安装即可<br>virtualbox虚拟机linux版本官网下载地址: <a href="https://www.virtualbox.org/wiki/Linux_Downloads" target="_blank" rel="external">https://www.virtualbox.org/wiki/Linux_Downloads</a></p>
-<h3 id="安装出错处理"><a href="#安装出错处理" class="headerlink" title="安装出错处理"></a>安装出错处理</h3><p>另外,若自己电脑已经安装了错误版本的virtaulbox的情况下，请先把原来的卸载掉,同时把错误版本依赖的包也删掉.<br>  <pre><code><br>    apt-get remove virtualbox<br>    apt-get auto remove<br>  </code></pre></p>
-<h3 id="添加用户组"><a href="#添加用户组" class="headerlink" title="添加用户组"></a>添加用户组</h3><p>最后把用户添加到vboxusers组（这个组在安装时会自动创建）:<br>  <pre><code><br>    sudo adduser zwts vboxusers<br>  </code></pre></p>
-<h2 id="安装windowsXP"><a href="#安装windowsXP" class="headerlink" title="安装windowsXP"></a>安装windowsXP</h2><h3 id="下载镜像"><a href="#下载镜像" class="headerlink" title="下载镜像"></a>下载镜像</h3><p>网上搜索下载Ghost XP纯净系统的镜像，需要带有windowsPE的，放在本地的某个目录内即可<br>若没有合适的镜像点击 <a href="http://pan.baidu.com/s/1c1UzEtq" target="_blank" rel="external">我的镜像</a> 下载</p>
-<h3 id="新建虚拟机"><a href="#新建虚拟机" class="headerlink" title="新建虚拟机"></a>新建虚拟机</h3><p>打开virtualbox，点击new新建，除了内存和硬盘需要自己按需修改之外，一路选择默认选项即可<br>我的电脑配置4G内存/300G硬盘， 选择虚拟机内存2048M，硬盘20G<br>新建好了之后我们需要把镜像文件以光盘的形式挂在刚刚新建的虚拟机上：<br>  settings =&gt; storage =&gt; add optical drive =&gt; choose disk<br>选择刚刚下载好的镜像iso文件，完成后确定<br>点击start启动虚拟机<br>出现镜像文件的安装选项，选择进入windowsPE<br>进入PE系统之后，自动分盘，自动GHOST安装，自动重启。（有可能这一步直接成功了）</p>
-<h3 id="虚拟机出错处理"><a href="#虚拟机出错处理" class="headerlink" title="虚拟机出错处理"></a>虚拟机出错处理</h3><p>start时有可能虚拟机报错，请在网上搜索报错信息解决，这里我把我所遇到的报错信息和解决方案记录下来：</p>
-<blockquote>
-<p>VT-x is disabled in the BIOS for all CPU modes (VERR_VMX_MSR_ALL_VMX_DISABLED).<br>Result Code:<br>NS_ERROR_FAILURE (0x80004005)<br>Component:<br>ConsoleWrap<br>Interface:<br>IConsole {872da645-4a9b-1727-bee2-5585105b9eed}</p>
-<p>解决方案：<br>  Windows XP环境，这个是由于32位Windows XP最大支持3.25G内存，将分配给此虚拟电脑的内存降低到3.25G以内即可</p>
-</blockquote>
-<h3 id="蓝屏出错处理"><a href="#蓝屏出错处理" class="headerlink" title="蓝屏出错处理"></a>蓝屏出错处理</h3><p>  若安装GHOST系统重启之后进入了XP的load界面但是马上蓝屏报错，虚拟机使用GHOST安装，有可能会找不到设备驱动，导致蓝屏失败，需要修改注册表</p>
-<blockquote>
-<p>解决方案:<br>  不要选择自动重启或者重启后继续进入PE。<br>  开始菜单 运行cmd<br>  加载XP注册表到PE注册表：<br>  <pre><code><br>    reg load hklm\!system c:\windows\system32\config\system<br>  </code></pre><br>  再次打开cmd，输入regedit进入注册表编辑器<br>  打开HKEY_LOCAL_MACHINE\!system\ControlSet001\services\processor 修改start值从1到4<br>  打开HKEY_LOCAL_MACHINE\!system\ControlSet002\services\processor 修改start值从1到4<br>  卸载注册表<br>  <pre><code><br>    reg unload hklm\!system<br>  </code></pre><br>  重新启动电脑，之前蓝屏的部分就过了，安装程序自动检测到硬件设备安装驱动</p>
-</blockquote>
-<h2 id="安装virtualbox增强包"><a href="#安装virtualbox增强包" class="headerlink" title="安装virtualbox增强包"></a>安装virtualbox增强包</h2><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>  下载地址：<a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" rel="external">https://www.virtualbox.org/wiki/Downloads</a><br>  名称：VirtualBox 5.0.20 Oracle VM VirtualBox Extension Pack，版本请根据安装的virtualbox选择</p>
-<h3 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h3><p>  双击下载下来的.vbox-extpack安装，默认选项即可</p>
-<h3 id="挂载增强包镜像"><a href="#挂载增强包镜像" class="headerlink" title="挂载增强包镜像"></a>挂载增强包镜像</h3><p>  settings =&gt; storage =&gt; add optical drive =&gt; choose disk<br>  选择/usr/share/virtualbox（若这里没有，请自己找找）下的 VBoxGuestAdditions.iso</p>
-<h3 id="虚拟机中安装增强应用"><a href="#虚拟机中安装增强应用" class="headerlink" title="虚拟机中安装增强应用"></a>虚拟机中安装增强应用</h3><p>  重启虚拟机<br>  打开我的电脑发现新的挂载的光盘G盘？<br>  双击安装，默认选项即可，完成后会自动重启</p>
-<h3 id="设置虚拟机和主机的共享目录"><a href="#设置虚拟机和主机的共享目录" class="headerlink" title="设置虚拟机和主机的共享目录"></a>设置虚拟机和主机的共享目录</h3><p>  在安装了增强包之后，打开虚拟机的Settings=&gt;Shared Folders=&gt;添加按钮=&gt;选择目录<br>  启动xp虚拟机<br>  打开我的电脑 =&gt; 工具 =&gt; 映射网络驱动器 =&gt; 网上邻居 =&gt; VirtualBox Shared Folders =&gt; Vboxsvr<br>  完成</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/15/xp-virtualbox/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/28/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/28/hello-world/" class="archive-article-date">
-  	<time datetime="2017-04-28T10:04:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/28/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
   
 
 
@@ -648,8 +322,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
