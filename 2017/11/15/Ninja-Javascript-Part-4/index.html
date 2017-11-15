@@ -15,7 +15,7 @@
 <meta property="og:url" content="//tanshizw.com/2017/11/15/Ninja-Javascript-Part-4/index.html">
 <meta property="og:site_name" content="迎风布阵 逆水行舟">
 <meta property="og:description" content="正则 正则字面量正则字面量用正斜杠界定:  12var pattern = /test/;var pattern = /test/ig;  构造RegExp实例  12var pattern = new RegExp(&quot;test&quot;);var pattern = new RegExp(&quot;test&quot;, &quot;ig&quot;); 如果正则是已知的，优先选择字面量语法，而构造器的方式多用在运行时。  3个标志i: 让">
-<meta property="og:updated_time" content="2017-11-15T12:03:27.000Z">
+<meta property="og:updated_time" content="2017-11-15T12:08:27.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ninja Javascript Part 4">
 <meta name="twitter:description" content="正则 正则字面量正则字面量用正斜杠界定:  12var pattern = /test/;var pattern = /test/ig;  构造RegExp实例  12var pattern = new RegExp(&quot;test&quot;);var pattern = new RegExp(&quot;test&quot;, &quot;ig&quot;); 如果正则是已知的，优先选择字面量语法，而构造器的方式多用在运行时。  3个标志i: 让">
@@ -178,9 +178,11 @@
 <ul>
 <li><h6 id="3个标志"><a href="#3个标志" class="headerlink" title="3个标志"></a>3个标志</h6><p>i: 让正则表达式不区分大小写<br>g: 匹配模式中的所有实例<br>m: 允许匹配多行</p>
 </li>
-<li><h6 id="匹配一类"><a href="#匹配一类" class="headerlink" title="匹配一类"></a>匹配一类</h6><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[<span class="symbol">abc</span>]: <span class="link">a或b或c</span></div><div class="line">[<span class="symbol">^abc</span>]: <span class="link">abc以外的任意字符</span></div><div class="line">[<span class="symbol">a-m</span>]: <span class="link">a到m之间的所有字符</span></div></pre></td></tr></table></figure>
+<li><h6 id="匹配一类"><a href="#匹配一类" class="headerlink" title="匹配一类"></a>匹配一类</h6><p><strong>[abc]</strong>: a或b或c</p>
 </li>
 </ul>
+<p><strong>[^abc]</strong>: abc以外的任意字符</p>
+<p><strong>[a-m]</strong>: a到m之间的所有字符</p>
 
       
 
