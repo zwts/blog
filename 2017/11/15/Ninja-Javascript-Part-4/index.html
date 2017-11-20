@@ -15,7 +15,7 @@
 <meta property="og:url" content="//tanshizw.com/2017/11/15/Ninja-Javascript-Part-4/index.html">
 <meta property="og:site_name" content="迎风布阵 逆水行舟">
 <meta property="og:description" content="正则 正则字面量正则字面量用正斜杠界定:  12var pattern = /test/;var pattern = /test/ig;  构造RegExp实例  12var pattern = new RegExp(&quot;test&quot;);var pattern = new RegExp(&quot;test&quot;, &quot;ig&quot;); 如果正则是已知的，优先选择字面量语法，而构造器的方式多用在运行时。  3个标志 i:">
-<meta property="og:updated_time" content="2017-11-16T12:51:35.000Z">
+<meta property="og:updated_time" content="2017-11-20T12:06:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ninja Javascript Part 4">
 <meta name="twitter:description" content="正则 正则字面量正则字面量用正斜杠界定:  12var pattern = /test/;var pattern = /test/ig;  构造RegExp实例  12var pattern = new RegExp(&quot;test&quot;);var pattern = new RegExp(&quot;test&quot;, &quot;ig&quot;); 如果正则是已知的，优先选择字面量语法，而构造器的方式多用在运行时。  3个标志 i:">
@@ -184,7 +184,28 @@
 <li><h6 id="匹配一类"><a href="#匹配一类" class="headerlink" title="匹配一类"></a>匹配一类</h6></li>
 <li>[abc]: a或b或c</li>
 <li>[^abc]: abc以外的任意字符</li>
-<li>[a-m]: a到m之间的所有字符</li>
+<li><p>[a-m]: a到m之间的所有字符</p>
+</li>
+<li><h6 id="重复出现"><a href="#重复出现" class="headerlink" title="重复出现"></a>重复出现</h6></li>
+<li>?: 出现1次或根本不出现</li>
+<li>+: 字符出现1次或者多次</li>
+<li>*: 字符出现0次或者多次</li>
+<li>a{4}: a连续出现4次</li>
+<li>a{4, 10}: a连续出现4次到10次之间的随意值</li>
+<li><p>a{4,}: a连续出现4次以上的次数</p>
+</li>
+<li><h6 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h6><p>/(ab)+/ 匹配1个或者多个连续出现的字符串ab。</p>
+</li>
+<li><h6 id="反向引用"><a href="#反向引用" class="headerlink" title="反向引用"></a>反向引用</h6><p>在正则中所定义的捕获的反向引用。/^([dtn])a\1/，可以是任意1个以d，t，n开头的，并且后面跟着1个a字符，并且后面跟着的是和第一个捕获相同的字符的字符串。dad</p>
+</li>
+</ul>
+<p>捕获和表达式分组都使用小括号表示。</p>
+<p>被动子表达式，阻止不必要的捕获: /((?:nijia-)+)sword/ ,防止任何意外的捕获，所以在确定表达式是只用于分组时，需要使用 被动子表达式”?:”。</p>
+<ul>
+<li><h6 id="常用方案"><a href="#常用方案" class="headerlink" title="常用方案"></a>常用方案</h6></li>
+<li>/[\S\s]/ 匹配所有字符包括换行符。</li>
+<li>/^\s+|\s+$/g 匹配所有开头或者结尾的空格。</li>
+<li>/[\w\u0080-\uFFFF_-]+/ 匹配包括Unicode在内的所有字符</li>
 </ul>
 
       
