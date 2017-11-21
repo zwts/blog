@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//tanshizw.com">
-  <title>Archives: 2017 | 迎风布阵 逆水行舟</title>
+  <title>Ninja Javascript Part 5 | 迎风布阵 逆水行舟</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="迎风布阵 逆水行舟">
-<meta property="og:url" content="//tanshizw.com/archives/2017/index.html">
+  <meta name="description" content="线程在Web worker(?)可用之前，++浏览器的所有Javascript代码都是在单线程中执行的++。异步事件的处理程序，如用户界面事件和定时器，在线程中没有代码执行的时候才执行，处理程序在执行时必须排队，并且一个处理程序不能中断另一个。  Javascript 是单线程的  Javascript 运行在浏览器中，是单线程的，每个windows一个线程。 浏览器是事件驱动，很多行为异步的，会">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ninja Javascript Part 5">
+<meta property="og:url" content="//tanshizw.com/2017/11/21/Ninja-Javascript-Part-5/index.html">
 <meta property="og:site_name" content="迎风布阵 逆水行舟">
+<meta property="og:description" content="线程在Web worker(?)可用之前，++浏览器的所有Javascript代码都是在单线程中执行的++。异步事件的处理程序，如用户界面事件和定时器，在线程中没有代码执行的时候才执行，处理程序在执行时必须排队，并且一个处理程序不能中断另一个。  Javascript 是单线程的  Javascript 运行在浏览器中，是单线程的，每个windows一个线程。 浏览器是事件驱动，很多行为异步的，会">
+<meta property="og:updated_time" content="2017-11-21T12:02:23.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="迎风布阵 逆水行舟">
+<meta name="twitter:title" content="Ninja Javascript Part 5">
+<meta name="twitter:description" content="线程在Web worker(?)可用之前，++浏览器的所有Javascript代码都是在单线程中执行的++。异步事件的处理程序，如用户界面事件和定时器，在线程中没有代码执行的时候才执行，处理程序在执行时必须排队，并且一个处理程序不能中断另一个。  Javascript 是单线程的  Javascript 运行在浏览器中，是单线程的，每个windows一个线程。 浏览器是事件驱动，很多行为异步的，会">
   
     <link rel="alternative" href="/atom.xml" title="迎风布阵 逆水行舟" type="application/atom+xml">
   
@@ -141,292 +146,174 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Ninja-Javascript-Part-5" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Ninja Javascript Part 5
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/21/Ninja-Javascript-Part-5/" class="archive-article-date">
+
+        
+        <a href="/2017/11/21/Ninja-Javascript-Part-5/" class="archive-article-date">
   	<time datetime="2017-11-21T12:02:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-21</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/21/Ninja-Javascript-Part-5/">Ninja Javascript Part 5</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h6 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h6><p>在<strong>Web worker</strong>(?)可用之前，++浏览器的所有Javascript代码都是在单线程中执行的++。异步事件的处理程序，如用户界面事件和定时器，在线程中没有代码执行的时候才执行，处理程序在执行时必须排队，并且一个处理程序不能中断另一个。</p>
+<ul>
+<li><p>Javascript 是单线程的</p>
+<ol>
+<li>Javascript 运行在浏览器中，是单线程的，每个windows一个线程。</li>
+<li>浏览器是事件驱动，很多行为异步的，会创建事件并放入执行队列中。</li>
+<li>Javascript 引擎单线程处理它的任务队列，也就是普通函数和回调函数组成的队列。</li>
+<li>异步事件发生时，会把异步执行的callback放入队列，并等待当前代码执行完成。</li>
+</ol>
+</li>
+<li><p>浏览器不是单线程的</p>
+<ol>
+<li>javascript 引擎线程</li>
+<li>界面渲染线程</li>
+<li>浏览器事件触发线程</li>
+<li>http请求线程(Ajax)</li>
+</ol>
+</li>
+<li><p>Ajax 异步</p>
+<p>Ajax请求确实是异步的，这请求是由浏览器新开一个线程请求，事件回调的时候是放入Event loop单线程事件队列等候处理。</p>
+</li>
+</ul>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/avatar.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/avatar.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://tanshizw.com/2017/11/21/Ninja-Javascript-Part-5/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/15/Ninja-Javascript-Part-4/" class="archive-article-date">
-  	<time datetime="2017-11-15T11:59:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-15</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/15/Ninja-Javascript-Part-4/">Ninja Javascript Part 4</a>
-    </h1>
+    <a href="/2017/11/15/Ninja-Javascript-Part-4/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Ninja Javascript Part 4
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+
+
+
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/14/Ninja-Javascript-Part-3/" class="archive-article-date">
-  	<time datetime="2017-11-14T11:16:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/14/Ninja-Javascript-Part-3/">Ninja Javascript Part 3</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/10/Ninja-Javascript-Part-2/" class="archive-article-date">
-  	<time datetime="2017-11-10T11:11:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/10/Ninja-Javascript-Part-2/">Ninja Javascript Part 2</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/09/Ninja-JavaScript-Part-1/" class="archive-article-date">
-  	<time datetime="2017-11-09T06:48:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/09/Ninja-JavaScript-Part-1/">Ninja JavaScript Part 1</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/15/tip1/" class="archive-article-date">
-  	<time datetime="2017-05-15T08:29:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/15/tip1/">No child processes compile error</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/15/find_missing_libs_cause_compile_error/" class="archive-article-date">
-  	<time datetime="2017-05-15T06:01:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/15/find_missing_libs_cause_compile_error/">编译系统找不到某个lib.so库时，便捷寻找方法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/15/Unable-to-run-mksdcard-SDK-tool/" class="archive-article-date">
-  	<time datetime="2017-05-15T06:00:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/15/Unable-to-run-mksdcard-SDK-tool/">Android studio不兼容本地的SDK工具(error by mksdcard)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/15/xp-virtualbox/" class="archive-article-date">
-  	<time datetime="2017-05-15T05:59:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/15/xp-virtualbox/">Ubuntu上使用virtualbox安装windowsXP虚拟机</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/28/hello-world/" class="archive-article-date">
-  	<time datetime="2017-04-28T10:04:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/28/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -449,8 +336,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
