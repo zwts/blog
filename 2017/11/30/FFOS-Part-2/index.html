@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//tanshizw.com">
-  <title>Archives | 迎风布阵 逆水行舟</title>
+  <title>FFOS Part 2 | 迎风布阵 逆水行舟</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="迎风布阵 逆水行舟">
-<meta property="og:url" content="//tanshizw.com/archives/index.html">
+  <meta name="description" content="GaiaXUL  XML User Interface Language, a cross-platform language for description applications’ user interface. https://developer.mozilla.org/en-US/docs/XUL_Tutorial  XULRunner  XULRunner deploys XUL ap">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FFOS Part 2">
+<meta property="og:url" content="//tanshizw.com/2017/11/30/FFOS-Part-2/index.html">
 <meta property="og:site_name" content="迎风布阵 逆水行舟">
+<meta property="og:description" content="GaiaXUL  XML User Interface Language, a cross-platform language for description applications’ user interface. https://developer.mozilla.org/en-US/docs/XUL_Tutorial  XULRunner  XULRunner deploys XUL ap">
+<meta property="og:updated_time" content="2017-11-30T09:32:49.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="迎风布阵 逆水行舟">
+<meta name="twitter:title" content="FFOS Part 2">
+<meta name="twitter:description" content="GaiaXUL  XML User Interface Language, a cross-platform language for description applications’ user interface. https://developer.mozilla.org/en-US/docs/XUL_Tutorial  XULRunner  XULRunner deploys XUL ap">
   
     <link rel="alternative" href="/atom.xml" title="迎风布阵 逆水行舟" type="application/atom+xml">
   
@@ -141,373 +146,191 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-FFOS-Part-2" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      FFOS Part 2
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/30/FFOS-Part-2/" class="archive-article-date">
+
+        
+        <a href="/2017/11/30/FFOS-Part-2/" class="archive-article-date">
   	<time datetime="2017-11-30T08:51:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-30</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/30/FFOS-Part-2/">FFOS Part 2</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h6 id="Gaia"><a href="#Gaia" class="headerlink" title="Gaia"></a>Gaia</h6><p><strong>XUL</strong></p>
+<ul>
+<li>XML User Interface Language, a cross-platform language for description applications’ user interface.</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/XUL_Tutorial" target="_blank" rel="external">https://developer.mozilla.org/en-US/docs/XUL_Tutorial</a></li>
+</ul>
+<p><strong>XULRunner</strong></p>
+<ul>
+<li>XULRunner deploys XUL applications.</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/XULRunner" target="_blank" rel="external">https://developer.mozilla.org/en-US/docs/XULRunner</a></li>
+</ul>
+<p><strong>shell.xul</strong></p>
+<ul>
+<li>An entry point of Gaia, brings system APP up.</li>
+<li>gecko/b2g/chrome/content/shell.xul</li>
+</ul>
+<p><strong>System app</strong></p>
+<ul>
+<li>System app is the parent frame that create and destroy iframes to launch or stop other web apps.</li>
+</ul>
+<p><strong>API: mozSettings</strong></p>
+<ul>
+<li>get</li>
+<li>set</li>
+<li>observer</li>
+</ul>
+<p><strong>How app to launch</strong></p>
+<ol>
+<li>Get app reference from mozApps API, and call <strong>app.launch()</strong></li>
+<li>Gecko receives request, then fire <strong>mozChromeEvent</strong> to System with launching APP detail</li>
+<li>System handle event, then <strong>insert iframe into it’s DOM</strong></li>
+<li>App <strong>load index.html</strong> in iframe</li>
+</ol>
+<p><strong>Write test case in Gaia</strong></p>
+<ul>
+<li><a href="https://github.com/mozilla-b2g/gaia/#tests" target="_blank" rel="external">https://github.com/mozilla-b2g/gaia/#tests</a></li>
+<li>Unit Tests, <a href="https://developer.mozilla.org/en/Mozilla/Boot_to_Gecko/Gaia_Unit_Tests" target="_blank" rel="external">https://developer.mozilla.org/en/Mozilla/Boot_to_Gecko/Gaia_Unit_Tests</a></li>
+<li>Integration Test, <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Automated_testing/Gaia_integration_tests" target="_blank" rel="external">https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Automated_testing/Gaia_integration_tests</a></li>
+<li>Provide APIs: <code>suite()</code>, <code>test()</code>, <code>setup()</code>, <code>teardown()</code></li>
+</ul>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/avatar.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/avatar.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://tanshizw.com/2017/11/30/FFOS-Part-2/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/29/FFOS-Part-1/" class="archive-article-date">
-  	<time datetime="2017-11-29T09:36:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-29</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/29/FFOS-Part-1/">FFOS Part 1</a>
-    </h1>
+    <a href="/2017/11/29/FFOS-Part-1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          FFOS Part 1
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+
+
+
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/27/Ninja-Javascript-Part-6/" class="archive-article-date">
-  	<time datetime="2017-11-27T12:06:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/27/Ninja-Javascript-Part-6/">Ninja Javascript Part 6</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/21/Ninja-Javascript-Part-5/" class="archive-article-date">
-  	<time datetime="2017-11-21T12:02:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/21/Ninja-Javascript-Part-5/">Ninja Javascript Part 5</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/15/Ninja-Javascript-Part-4/" class="archive-article-date">
-  	<time datetime="2017-11-15T11:59:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/15/Ninja-Javascript-Part-4/">Ninja Javascript Part 4</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/14/Ninja-Javascript-Part-3/" class="archive-article-date">
-  	<time datetime="2017-11-14T11:16:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/14/Ninja-Javascript-Part-3/">Ninja Javascript Part 3</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/10/Ninja-Javascript-Part-2/" class="archive-article-date">
-  	<time datetime="2017-11-10T11:11:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/10/Ninja-Javascript-Part-2/">Ninja Javascript Part 2</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/09/Ninja-JavaScript-Part-1/" class="archive-article-date">
-  	<time datetime="2017-11-09T06:48:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/09/Ninja-JavaScript-Part-1/">Ninja JavaScript Part 1</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/15/tip1/" class="archive-article-date">
-  	<time datetime="2017-05-15T08:29:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/15/tip1/">No child processes compile error</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/15/find_missing_libs_cause_compile_error/" class="archive-article-date">
-  	<time datetime="2017-05-15T06:01:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/15/find_missing_libs_cause_compile_error/">编译系统找不到某个lib.so库时，便捷寻找方法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/15/Unable-to-run-mksdcard-SDK-tool/" class="archive-article-date">
-  	<time datetime="2017-05-15T06:00:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/15/Unable-to-run-mksdcard-SDK-tool/">Android studio不兼容本地的SDK工具(error by mksdcard)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/15/xp-virtualbox/" class="archive-article-date">
-  	<time datetime="2017-05-15T05:59:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/15/xp-virtualbox/">Ubuntu上使用virtualbox安装windowsXP虚拟机</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/28/hello-world/" class="archive-article-date">
-  	<time datetime="2017-04-28T10:04:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/28/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -530,8 +353,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

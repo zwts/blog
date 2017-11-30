@@ -143,6 +143,92 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-FFOS-Part-2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/30/FFOS-Part-2/">FFOS Part 2</a>
+    </h1>
+  
+
+        
+        <a href="/2017/11/30/FFOS-Part-2/" class="archive-article-date">
+  	<time datetime="2017-11-30T08:51:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h6 id="Gaia"><a href="#Gaia" class="headerlink" title="Gaia"></a>Gaia</h6><p><strong>XUL</strong></p>
+<ul>
+<li>XML User Interface Language, a cross-platform language for description applications’ user interface.</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/XUL_Tutorial" target="_blank" rel="external">https://developer.mozilla.org/en-US/docs/XUL_Tutorial</a></li>
+</ul>
+<p><strong>XULRunner</strong></p>
+<ul>
+<li>XULRunner deploys XUL applications.</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/XULRunner" target="_blank" rel="external">https://developer.mozilla.org/en-US/docs/XULRunner</a></li>
+</ul>
+<p><strong>shell.xul</strong></p>
+<ul>
+<li>An entry point of Gaia, brings system APP up.</li>
+<li>gecko/b2g/chrome/content/shell.xul</li>
+</ul>
+<p><strong>System app</strong></p>
+<ul>
+<li>System app is the parent frame that create and destroy iframes to launch or stop other web apps.</li>
+</ul>
+<p><strong>API: mozSettings</strong></p>
+<ul>
+<li>get</li>
+<li>set</li>
+<li>observer</li>
+</ul>
+<p><strong>How app to launch</strong></p>
+<ol>
+<li>Get app reference from mozApps API, and call <strong>app.launch()</strong></li>
+<li>Gecko receives request, then fire <strong>mozChromeEvent</strong> to System with launching APP detail</li>
+<li>System handle event, then <strong>insert iframe into it’s DOM</strong></li>
+<li>App <strong>load index.html</strong> in iframe</li>
+</ol>
+<p><strong>Write test case in Gaia</strong></p>
+<ul>
+<li><a href="https://github.com/mozilla-b2g/gaia/#tests" target="_blank" rel="external">https://github.com/mozilla-b2g/gaia/#tests</a></li>
+<li>Unit Tests, <a href="https://developer.mozilla.org/en/Mozilla/Boot_to_Gecko/Gaia_Unit_Tests" target="_blank" rel="external">https://developer.mozilla.org/en/Mozilla/Boot_to_Gecko/Gaia_Unit_Tests</a></li>
+<li>Integration Test, <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Automated_testing/Gaia_integration_tests" target="_blank" rel="external">https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Automated_testing/Gaia_integration_tests</a></li>
+<li>Provide APIs: <code>suite()</code>, <code>test()</code>, <code>setup()</code>, <code>teardown()</code></li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/11/30/FFOS-Part-2/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-FFOS-Part-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -622,56 +708,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/11/09/Ninja-JavaScript-Part-1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-tip1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/15/tip1/">No child processes compile error</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/15/tip1/" class="archive-article-date">
-  	<time datetime="2017-05-15T08:29:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>no child processes…</p>
-<p>现象描述：-j1 单线程编译能够通过，多线程-j8 或其它概率性不能通过，出现上面的报错。</p>
-<p>解决方法：jdk版本不对，Ubuntu16.04应该用openjdk8</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/15/tip1/">展开全文 >></a>
         </p>
       
 
