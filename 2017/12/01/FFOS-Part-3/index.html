@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//tanshizw.com">
-  <title>迎风布阵 逆水行舟</title>
+  <title>FFOS Part 3 | 迎风布阵 逆水行舟</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="迎风布阵 逆水行舟">
-<meta property="og:url" content="//tanshizw.com/index.html">
+  <meta name="description" content="GeckoXPCOM  Cross Platform Component Object Model; A framework which allows developers to break up monolithic software projects into smaller modularized pieces Provide: component management object mes">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FFOS Part 3">
+<meta property="og:url" content="//tanshizw.com/2017/12/01/FFOS-Part-3/index.html">
 <meta property="og:site_name" content="迎风布阵 逆水行舟">
+<meta property="og:description" content="GeckoXPCOM  Cross Platform Component Object Model; A framework which allows developers to break up monolithic software projects into smaller modularized pieces Provide: component management object mes">
+<meta property="og:updated_time" content="2017-12-01T10:04:54.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="迎风布阵 逆水行舟">
+<meta name="twitter:title" content="FFOS Part 3">
+<meta name="twitter:description" content="GeckoXPCOM  Cross Platform Component Object Model; A framework which allows developers to break up monolithic software projects into smaller modularized pieces Provide: component management object mes">
   
     <link rel="alternative" href="/atom.xml" title="迎风布阵 逆水行舟" type="application/atom+xml">
   
@@ -141,16 +146,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-FFOS-Part-3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-FFOS-Part-3" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/01/FFOS-Part-3/">FFOS Part 3</a>
+    <h1 class="article-title" itemprop="name">
+      FFOS Part 3
     </h1>
   
 
@@ -222,91 +225,36 @@
       
 
       
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/01/FFOS-Part-3/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-FFOS-Part-2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/30/FFOS-Part-2/">FFOS Part 2</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/30/FFOS-Part-2/" class="archive-article-date">
-  	<time datetime="2017-11-30T08:51:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h6 id="Gaia"><a href="#Gaia" class="headerlink" title="Gaia"></a>Gaia</h6><p><strong>XUL</strong></p>
-<ul>
-<li>XML User Interface Language, a cross-platform language for description applications’ user interface.</li>
-<li><a href="https://developer.mozilla.org/en-US/docs/XUL_Tutorial" target="_blank" rel="external">https://developer.mozilla.org/en-US/docs/XUL_Tutorial</a></li>
-</ul>
-<p><strong>XULRunner</strong></p>
-<ul>
-<li>XULRunner deploys XUL applications.</li>
-<li><a href="https://developer.mozilla.org/en-US/docs/XULRunner" target="_blank" rel="external">https://developer.mozilla.org/en-US/docs/XULRunner</a></li>
-</ul>
-<p><strong>shell.xul</strong></p>
-<ul>
-<li>An entry point of Gaia, brings system APP up.</li>
-<li>gecko/b2g/chrome/content/shell.xul</li>
-</ul>
-<p><strong>System app</strong></p>
-<ul>
-<li>System app is the parent frame that create and destroy iframes to launch or stop other web apps.</li>
-</ul>
-<p><strong>API: mozSettings</strong></p>
-<ul>
-<li>get</li>
-<li>set</li>
-<li>observer</li>
-</ul>
-<p><strong>How app to launch</strong></p>
-<ol>
-<li>Get app reference from mozApps API, and call <strong>app.launch()</strong></li>
-<li>Gecko receives request, then fire <strong>mozChromeEvent</strong> to System with launching APP detail</li>
-<li>System handle event, then <strong>insert iframe into it’s DOM</strong></li>
-<li>App <strong>load index.html</strong> in iframe</li>
-</ol>
-<p><strong>Write test case in Gaia</strong></p>
-<ul>
-<li><a href="https://github.com/mozilla-b2g/gaia/#tests" target="_blank" rel="external">https://github.com/mozilla-b2g/gaia/#tests</a></li>
-<li>Unit Tests, <a href="https://developer.mozilla.org/en/Mozilla/Boot_to_Gecko/Gaia_Unit_Tests" target="_blank" rel="external">https://developer.mozilla.org/en/Mozilla/Boot_to_Gecko/Gaia_Unit_Tests</a></li>
-<li>Integration Test, <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Automated_testing/Gaia_integration_tests" target="_blank" rel="external">https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Automated_testing/Gaia_integration_tests</a></li>
-<li>Provide APIs: <code>suite()</code>, <code>test()</code>, <code>setup()</code>, <code>teardown()</code></li>
-</ul>
-
-      
-
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/avatar.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/avatar.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -315,429 +263,78 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/30/FFOS-Part-2/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://tanshizw.com/2017/12/01/FFOS-Part-3/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-
-
-
-
   
-    <article id="post-FFOS-Part-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
+<nav id="article-nav">
+  
+    <a href="/2017/11/30/FFOS-Part-2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/29/FFOS-Part-1/">FFOS Part 1</a>
-    </h1>
-  
-
+          FFOS Part 2
         
-        <a href="/2017/11/29/FFOS-Part-1/" class="archive-article-date">
-  	<time datetime="2017-11-29T09:36:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h6 id="Architecture"><a href="#Architecture" class="headerlink" title="Architecture"></a>Architecture</h6><p><strong>Gaia</strong></p>
-<ul>
-<li>Applications and UI</li>
-<li>Third-party application can be installed</li>
-</ul>
-<p><strong>Gecko</strong></p>
-<ul>
-<li>JS Runtime (?)</li>
-<li>APIs</li>
-<li>Consists: network stack, graph stack, layout engine, virtual machine(for JS), porting layers</li>
-</ul>
-<p><strong>Gonk</strong></p>
-<ul>
-<li>Linux Kernel</li>
-<li>Device Drivers</li>
-<li>Hardware Abstraction Layer</li>
-</ul>
-<h6 id="Start-up"><a href="#Start-up" class="headerlink" title="Start up"></a>Start up</h6><ol>
-<li>Primary bootloader (usually show the first flash screen)</li>
-<li>Linux Kernel and Modem</li>
-<li>The end of bootstrapping process modem image loaded.</li>
-<li>The end of kernel startup, userspace “init” process launched</li>
-<li>A ramdisk mounted</li>
-</ol>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/29/FFOS-Part-1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
+      </div>
+    </a>
   
-    <article id="post-Ninja-Javascript-Part-6" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/27/Ninja-Javascript-Part-6/">Ninja Javascript Part 6</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/27/Ninja-Javascript-Part-6/" class="archive-article-date">
-  	<time datetime="2017-11-27T12:06:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h6 id="DOM特性和DOM属性"><a href="#DOM特性和DOM属性" class="headerlink" title="DOM特性和DOM属性"></a>DOM特性和DOM属性</h6><ul>
-<li>访问特性值：getAttribute／setAttribute 或者使用DOM对象上与之对应的属性。</li>
-</ul>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">e.getAttribute('<span class="built_in">id</span>')</div><div class="line">e.<span class="built_in">id</span></div></pre></td></tr></table></figure>
-<p>id 的属性和特性以某种方式联系在一起，修改属性值也会改变特性值，但它们并没有共享一个相同的值。</p>
-<p>一些特性名和属性名不同的情况:<br>class/className, tabindex/tabIndex 等等。</p>
-<h6 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h6><p>在冒泡阶段，事件将从事件源传播到DOM的根节点；而在捕获阶段，事件则是从DOM根节点遍历传播到事件源上。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/27/Ninja-Javascript-Part-6/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-Ninja-Javascript-Part-5" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/21/Ninja-Javascript-Part-5/">Ninja Javascript Part 5</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/21/Ninja-Javascript-Part-5/" class="archive-article-date">
-  	<time datetime="2017-11-21T12:02:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h6 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h6><p>在<strong>Web worker</strong>(?web worker 是运行在后台的 JavaScript，独立于其他脚本，不会影响页面的性能)可用之前，++浏览器的所有Javascript代码都是在单线程中执行的++。异步事件的处理程序，如用户界面事件和定时器，在线程中没有代码执行的时候才执行，处理程序在执行时必须排队，并且一个处理程序不能中断另一个。</p>
-<ul>
-<li><p>Javascript 是单线程的</p>
-<ol>
-<li>Javascript 运行在浏览器中，是单线程的，每个windows一个线程。</li>
-<li>浏览器是事件驱动，很多行为异步的，会创建事件并放入执行队列中。</li>
-<li>Javascript 引擎单线程处理它的任务队列，也就是普通函数和回调函数组成的队列。</li>
-<li>异步事件发生时，会把异步执行的callback放入队列，并等待当前代码执行完成。</li>
-</ol>
-</li>
-<li><p>浏览器不是单线程的</p>
-<ol>
-<li>javascript 引擎线程</li>
-<li>界面渲染线程</li>
-<li>浏览器事件触发线程</li>
-<li>http请求线程(Ajax)</li>
-</ol>
-</li>
-<li><p>Ajax 异步</p>
-<p>Ajax请求确实是异步的，这请求是由浏览器新开一个线程请求，事件回调的时候是放入Event loop单线程事件队列等候处理。</p>
-</li>
-<li><p>利用定时器分解长时间任务<br>setTimeout(fun, 0) </p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> count = <span class="number">2000</span>;</div><div class="line"><span class="keyword">var</span> divide = <span class="number">4</span>;</div><div class="line"><span class="keyword">var</span> chunkSize = count/divide;</div><div class="line"><span class="keyword">var</span> iteration = <span class="number">0</span>;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> table = <span class="built_in">document</span>.createElement(<span class="string">'tbody'</span>);</div><div class="line"></div><div class="line">setTimeout(<span class="function"><span class="keyword">function</span> <span class="title">generateRows</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> base = (chunkSize) * iteration;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; chunkSize; i++) &#123;</div><div class="line">        <span class="keyword">let</span> tr = <span class="built_in">document</span>.createElement(<span class="string">'tr'</span>);</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> t = <span class="number">0</span>; t &lt; <span class="number">6</span>; t++) &#123;</div><div class="line">            <span class="keyword">let</span> td = <span class="built_in">document</span>.createElement(<span class="string">'td'</span>);</div><div class="line">            td.appendChild(<span class="built_in">document</span>.createTextNode((i + base) + <span class="string">","</span> + t + <span class="string">','</span> + iteration));</div><div class="line">            tr.appendChild(td);</div><div class="line">        &#125;</div><div class="line">        table.appendChild(tr);</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    iteration++;</div><div class="line">    <span class="keyword">if</span> (iteration &lt; divide) &#123;</div><div class="line">        setTimeout(generateRows, <span class="number">0</span>);</div><div class="line">    &#125;</div><div class="line">&#125;, <span class="number">0</span>);</div></pre></td></tr></table></figure>
-</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/21/Ninja-Javascript-Part-5/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-Ninja-Javascript-Part-4" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/15/Ninja-Javascript-Part-4/">Ninja Javascript Part 4</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/15/Ninja-Javascript-Part-4/" class="archive-article-date">
-  	<time datetime="2017-11-15T11:59:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="正则"><a href="#正则" class="headerlink" title="正则"></a>正则</h4><ul>
-<li><h6 id="正则字面量"><a href="#正则字面量" class="headerlink" title="正则字面量"></a>正则字面量</h6>正则字面量用正斜杠界定:</li>
-</ul>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">var pattern</span> = /test/;</div><div class="line"><span class="attribute">var pattern</span> = /test/ig;</div></pre></td></tr></table></figure>
-<ul>
-<li><h6 id="构造RegExp实例"><a href="#构造RegExp实例" class="headerlink" title="构造RegExp实例"></a>构造RegExp实例</h6></li>
-</ul>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> pattern = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"test"</span>);</div><div class="line"><span class="keyword">var</span> pattern = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"test"</span>, <span class="string">"ig"</span>);</div></pre></td></tr></table></figure>
-<p>如果正则是已知的，优先选择字面量语法，而构造器的方式多用在运行时。</p>
-<ul>
-<li><h6 id="3个标志"><a href="#3个标志" class="headerlink" title="3个标志"></a>3个标志</h6></li>
-<li>i: 让正则表达式不区分大小写</li>
-<li>g: 匹配模式中的所有实例</li>
-<li><p>m: 允许匹配多行</p>
-</li>
-<li><h6 id="匹配一类"><a href="#匹配一类" class="headerlink" title="匹配一类"></a>匹配一类</h6></li>
-<li>[abc]: a或b或c</li>
-<li>[^abc]: abc以外的任意字符</li>
-<li><p>[a-m]: a到m之间的所有字符</p>
-</li>
-<li><h6 id="重复出现"><a href="#重复出现" class="headerlink" title="重复出现"></a>重复出现</h6></li>
-<li>?: 出现1次或根本不出现</li>
-<li>+: 字符出现1次或者多次</li>
-<li>*: 字符出现0次或者多次</li>
-<li>a{4}: a连续出现4次</li>
-<li>a{4, 10}: a连续出现4次到10次之间的随意值</li>
-<li><p>a{4,}: a连续出现4次以上的次数</p>
-</li>
-<li><h6 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h6><p>/(ab)+/ 匹配1个或者多个连续出现的字符串ab。</p>
-</li>
-<li><h6 id="反向引用"><a href="#反向引用" class="headerlink" title="反向引用"></a>反向引用</h6><p>在正则中所定义的捕获的反向引用。/^([dtn])a\1/，可以是任意1个以d，t，n开头的，并且后面跟着1个a字符，并且后面跟着的是和第一个捕获相同的字符的字符串。dad</p>
-</li>
-</ul>
-<p>捕获和表达式分组都使用小括号表示。</p>
-<p>被动子表达式，阻止不必要的捕获: /((?:nijia-)+)sword/ ,防止任何意外的捕获，所以在确定表达式是只用于分组时，需要使用 被动子表达式”?:”。</p>
-<ul>
-<li><h6 id="常用方案"><a href="#常用方案" class="headerlink" title="常用方案"></a>常用方案</h6></li>
-<li>/[\S\s]/ 匹配所有字符包括换行符。</li>
-<li>/^\s+|\s+$/g 匹配所有开头或者结尾的空格。</li>
-<li>/[\w\u0080-\uFFFF_-]+/ 匹配包括Unicode在内的所有字符</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/15/Ninja-Javascript-Part-4/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-Ninja-Javascript-Part-3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/14/Ninja-Javascript-Part-3/">Ninja Javascript Part 3</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/14/Ninja-Javascript-Part-3/" class="archive-article-date">
-  	<time datetime="2017-11-14T11:16:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h6 id="实例属性的优先级"><a href="#实例属性的优先级" class="headerlink" title="实例属性的优先级"></a>实例属性的优先级</h6><ol>
-<li>通过原型给对象实例添加的属性</li>
-<li>在构造器函数内给对象的实例添加的属性</li>
-</ol>
-<p>在构造器内绑定的操作的优先级永远都高于在原型上绑定的操作优先级，因为构造器的this上下文指向的是实例自身。</p>
-<p>查询属性引用时，首先查询对象自身，如果不存在，再去原型上查找，如果还是不存在，那么返回undefine。</p>
-<h6 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h6><p>例如: 忍者是一个人，人又是一个哺乳动物，哺乳动物又是动物的一种…直到最终的是一个Object。<br>创建这样一个原型链的最好的方式是，使用一个对象的实例作为另一个对象的原型。</p>
-<p>用原型实现继承(即原型链)<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span><span class="params">()</span> </span>&#123;&#125;</div><div class="line">Person.prototype.dance = <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Ninja</span><span class="params">()</span> </span>&#123;&#125;</div><div class="line">Ninja.prototype = <span class="keyword">new</span> Person();</div><div class="line"></div><div class="line"><span class="keyword">var</span> ninja = <span class="keyword">new</span> Ninja();</div></pre></td></tr></table></figure></p>
-<p>注意，不要把原型对象赋值给原型，例如：Ninja.prototype = Person.prototype;，这样任何Ninja原型上的修改都会影响到person。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/14/Ninja-Javascript-Part-3/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-Ninja-Javascript-Part-2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/10/Ninja-Javascript-Part-2/">Ninja Javascript Part 2</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/10/Ninja-Javascript-Part-2/" class="archive-article-date">
-  	<time datetime="2017-11-10T11:11:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h6 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h6><p>闭包是一个函数在创建时允许该自身函数访问并操作该自身函数之外的变量时所创建的作用域。</p>
-<p>闭包可以让函数访问所有的变量和函数，只要这些变量和函数存在与该函数声明时的作用域内就行。</p>
-<h6 id="闭包的用法"><a href="#闭包的用法" class="headerlink" title="闭包的用法"></a>闭包的用法</h6><ol>
-<li>封装私有变量</li>
-</ol>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Ninja</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">var</span> feints = <span class="number">0</span>;</div><div class="line">    <span class="keyword">this</span>.getFeints = <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> feints;</div><div class="line">    &#125;;</div><div class="line">    </div><div class="line">    <span class="keyword">this</span>.feints = <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</div><div class="line">        feinits++;</div><div class="line">    &#125;;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> ninja = <span class="keyword">new</span> Ninja();</div><div class="line">ninja.feints();</div><div class="line"></div><div class="line">ninja.getFeints();<span class="comment">//1</span></div><div class="line">ninja.feints;<span class="comment">//undefine</span></div></pre></td></tr></table></figure>
-<h6 id="通过闭包实现缓存记忆"><a href="#通过闭包实现缓存记忆" class="headerlink" title="通过闭包实现缓存记忆"></a>通过闭包实现缓存记忆</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 查询缓存</span></div><div class="line"><span class="built_in">Function</span>.prototype.memoized = <span class="function"><span class="keyword">function</span>(<span class="params">key</span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>._values = <span class="keyword">this</span>._values || &#123;&#125;;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>._values[key] !== <span class="literal">undefined</span> ?</div><div class="line">    <span class="keyword">this</span>._values[key] :</div><div class="line">    <span class="keyword">this</span>._values[key] = <span class="keyword">this</span>.apply(<span class="keyword">this</span>, <span class="built_in">arguments</span>);</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="comment">// 封装函数，并且通过闭包把上下文保留下来</span></div><div class="line"><span class="built_in">Function</span>.prototype.memoize = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> fn = <span class="keyword">this</span>;</div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> fn.memoized.apply(fn, <span class="built_in">arguments</span>);</div><div class="line">    &#125;;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> isPrime = (<span class="function"><span class="keyword">function</span>(<span class="params">num</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> prime = num !== <span class="number">1</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">2</span>; i &lt; num; i++) &#123;</div><div class="line">        <span class="keyword">if</span> (num % i === <span class="number">0</span>) &#123;</div><div class="line">            prime = <span class="literal">false</span>;</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> prime;</div><div class="line">&#125;).memoize();</div><div class="line"></div><div class="line">assert(isPrime(<span class="number">17</span>), <span class="string">"17 is prime"</span>);</div></pre></td></tr></table></figure>
-<h6 id="即时函数"><a href="#即时函数" class="headerlink" title="即时函数"></a>即时函数</h6><p>代码模式:<br><figure class="highlight clojure"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(<span class="name">function</span>()&#123;&#125;)()<span class="comment">;</span></div></pre></td></tr></table></figure></p>
-<ul>
-<li>第一组圆括号作用是用于划定表达式的范围</li>
-<li>第二组圆括号则是一个操作符</li>
-<li>第一组圆括号内直接是使用的是匿名函数</li>
-</ul>
-<p>这段代码执行的操作:</p>
-<ol>
-<li>创建一个函数的实例</li>
-<li>执行该函数</li>
-<li>销毁该函数，因为语句结束后没有任何引用了</li>
-</ol>
-<h6 id="类库包装"><a href="#类库包装" class="headerlink" title="类库包装"></a>类库包装</h6><p>不希望一些不必要的变量去污染全局命名空间，尤其时那些零时变量，利用闭包和即时函数封装类库，使它尽可能的私有，并且选择性的暴露一些变量到全局空间。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> jQuery = <span class="built_in">window</span>.jQuery = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="comment">// initialize</span></div><div class="line">    &#125;;</div><div class="line">    <span class="comment">// ...</span></div><div class="line">&#125;)();</div></pre></td></tr></table></figure>
-<p>首先jQuery构造器(匿名函数)赋值给了window.jQuery,使其作为全局变量，然后将其赋值给了一个局部变量jQuery，强制让它保持在即时函数的作用域内。在即时函数的创建的世界中，名称jQuery的意义就是我们所期望的。</p>
-<p>另一种实现方式:<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> jQuery = (<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jQuery</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="comment">// initialize</span></div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="comment">// ...</span></div><div class="line">    <span class="keyword">return</span> jQuery;</div><div class="line">&#125;)();</div></pre></td></tr></table></figure></p>
-<p>首先在匿名函数的作用域中定义了jQuery函数，它可以自由存在于匿名函数的作用域中，然后将其返回并且赋值给一个名为jQuery全局变量，通常只输出一个变量时优先使用这种方式。</p>
-<h6 id="偏应用函数？重载函数？"><a href="#偏应用函数？重载函数？" class="headerlink" title="偏应用函数？重载函数？"></a>偏应用函数？重载函数？</h6><p>Todo</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/10/Ninja-Javascript-Part-2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
+</nav>
 
 
 
@@ -745,9 +342,10 @@
 
   
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
+  
+
+  
+
   
 
 
@@ -770,8 +368,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
