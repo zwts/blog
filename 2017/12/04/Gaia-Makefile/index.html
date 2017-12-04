@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//tanshizw.com">
-  <title>Archives: 2017/12 | 迎风布阵 逆水行舟</title>
+  <title>Gaia Makefile | 迎风布阵 逆水行舟</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="迎风布阵 逆水行舟">
-<meta property="og:url" content="//tanshizw.com/archives/2017/12/index.html">
+  <meta name="description" content="Makefilehttps://github.com/zwts/gaia/blob/v2.2/Makefile 注释内容  Global configrations  GAIA_DOMAIN SYSTEM ADB DEBUG REPORTER MOZPREFOUT MARIONETTE_RUNNER_HOST COVERAGE GAIA_APP_CONFIG   Lint code  make h">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Gaia Makefile">
+<meta property="og:url" content="//tanshizw.com/2017/12/04/Gaia-Makefile/index.html">
 <meta property="og:site_name" content="迎风布阵 逆水行舟">
+<meta property="og:description" content="Makefilehttps://github.com/zwts/gaia/blob/v2.2/Makefile 注释内容  Global configrations  GAIA_DOMAIN SYSTEM ADB DEBUG REPORTER MOZPREFOUT MARIONETTE_RUNNER_HOST COVERAGE GAIA_APP_CONFIG   Lint code  make h">
+<meta property="og:updated_time" content="2017-12-04T11:55:14.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="迎风布阵 逆水行舟">
+<meta name="twitter:title" content="Gaia Makefile">
+<meta name="twitter:description" content="Makefilehttps://github.com/zwts/gaia/blob/v2.2/Makefile 注释内容  Global configrations  GAIA_DOMAIN SYSTEM ADB DEBUG REPORTER MOZPREFOUT MARIONETTE_RUNNER_HOST COVERAGE GAIA_APP_CONFIG   Lint code  make h">
   
     <link rel="alternative" href="/atom.xml" title="迎风布阵 逆水行舟" type="application/atom+xml">
   
@@ -141,76 +146,190 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Gaia-Makefile" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Gaia Makefile
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/04/Gaia-Makefile/" class="archive-article-date">
+
+        
+        <a href="/2017/12/04/Gaia-Makefile/" class="archive-article-date">
   	<time datetime="2017-12-04T11:54:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-04</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/04/Gaia-Makefile/">Gaia Makefile</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h6 id="Makefile"><a href="#Makefile" class="headerlink" title="Makefile"></a>Makefile</h6><p><a href="https://github.com/zwts/gaia/blob/v2.2/Makefile" target="_blank" rel="external">https://github.com/zwts/gaia/blob/v2.2/Makefile</a></p>
+<p><strong>注释内容</strong></p>
+<ul>
+<li><p>Global configrations</p>
+<ol>
+<li>GAIA_DOMAIN</li>
+<li>SYSTEM</li>
+<li>ADB</li>
+<li>DEBUG</li>
+<li>REPORTER</li>
+<li>MOZPREFOUT</li>
+<li>MARIONETTE_RUNNER_HOST</li>
+<li>COVERAGE</li>
+<li>GAIA_APP_CONFIG</li>
+</ol>
+</li>
+<li><p>Lint code</p>
+<ol>
+<li>make hint</li>
+<li>make gjslint</li>
+<li>make lint</li>
+</ol>
+</li>
+<li><p>B2G Desktop</p>
+<ol>
+<li>USE_LOCAL_XULRUNNER_SDK</li>
+<li>XULRUNNER_DIRECTORY</li>
+</ol>
+</li>
+</ul>
+<p><strong>正文</strong></p>
+<ul>
+<li>MAKEFLAGS=-r<ul>
+<li>-r禁止使用build-in规则</li>
+<li><a href="https://www.gnu.org/software/make/manual/make.html#Implicit-Rules" target="_blank" rel="external">https://www.gnu.org/software/make/manual/make.html#Implicit-Rules</a></li>
+</ul>
+</li>
+</ul>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/avatar.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/avatar.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://tanshizw.com/2017/12/04/Gaia-Makefile/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/01/FFOS-Part-3/" class="archive-article-date">
-  	<time datetime="2017-12-01T10:02:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-01</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/01/FFOS-Part-3/">FFOS Part 3</a>
-    </h1>
+    <a href="/2017/12/01/FFOS-Part-3/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          FFOS Part 3
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+
+
+
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -233,8 +352,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
