@@ -15,7 +15,7 @@
 <meta property="og:url" content="//tanshizw.com/2017/12/04/Gaia-Makefile/index.html">
 <meta property="og:site_name" content="迎风布阵 逆水行舟">
 <meta property="og:description" content="Makefilehttps://github.com/zwts/gaia/blob/v2.2/Makefile 注释内容  Global configrations  GAIA_DOMAIN SYSTEM ADB DEBUG REPORTER MOZPREFOUT MARIONETTE_RUNNER_HOST COVERAGE GAIA_APP_CONFIG   Lint code  make h">
-<meta property="og:updated_time" content="2017-12-04T11:55:14.000Z">
+<meta property="og:updated_time" content="2017-12-05T13:35:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Gaia Makefile">
 <meta name="twitter:description" content="Makefilehttps://github.com/zwts/gaia/blob/v2.2/Makefile 注释内容  Global configrations  GAIA_DOMAIN SYSTEM ADB DEBUG REPORTER MOZPREFOUT MARIONETTE_RUNNER_HOST COVERAGE GAIA_APP_CONFIG   Lint code  make h">
@@ -198,9 +198,18 @@
 </ul>
 <p><strong>正文</strong></p>
 <ul>
-<li>MAKEFLAGS=-r<ul>
+<li><p>MAKEFLAGS=-r</p>
+<ul>
 <li>-r禁止使用build-in规则</li>
 <li><a href="https://www.gnu.org/software/make/manual/make.html#Implicit-Rules" target="_blank" rel="external">https://www.gnu.org/software/make/manual/make.html#Implicit-Rules</a></li>
+</ul>
+</li>
+<li><p>REBUILD</p>
+<ul>
+<li>GAIA_DISTRIBUTION_DIR</li>
+<li>LOCALE_BASEDIR</li>
+<li>LOCALES_FILE</li>
+<li>上述参数定义/改变的情况下，需要rebuild(具体rebuild操作<code>gaia/build/rebuild.js</code>)</li>
 </ul>
 </li>
 </ul>
