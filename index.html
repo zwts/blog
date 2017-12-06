@@ -195,20 +195,25 @@
 </ul>
 <p><strong>正文</strong></p>
 <ul>
-<li><p>MAKEFLAGS=-r</p>
-<ul>
+<li><strong>MAKEFLAGS=-r</strong><ul>
 <li>-r禁止使用build-in规则</li>
 <li><a href="https://www.gnu.org/software/make/manual/make.html#Implicit-Rules" target="_blank" rel="external">https://www.gnu.org/software/make/manual/make.html#Implicit-Rules</a></li>
 </ul>
 </li>
-<li><p>REBUILD</p>
-<ul>
+<li><strong>REBUILD</strong><ul>
 <li>GAIA_DISTRIBUTION_DIR</li>
 <li>LOCALE_BASEDIR</li>
 <li>LOCALES_FILE</li>
 <li>上述参数定义/改变的情况下，需要rebuild(具体rebuild操作<code>gaia/build/rebuild.js</code>)</li>
 </ul>
 </li>
+<li><strong>WGET_OPTS?=-c -nv</strong>   wget参数</li>
+<li><strong>DEVICE_DEBUG?=0</strong>  是否默认打开设备可调试</li>
+<li><strong>NO_LOCK_SCREEN?=0</strong>  是否默认打开锁屏</li>
+<li><strong>SCREEN_TIMEOUT?=-1</strong>  是否打开屏幕超时</li>
+<li><strong>PRODUCTION?=0</strong> 区别编译user/userdebug/eng版本</li>
+<li><strong>GAIA_OPTIMIZE?=0</strong></li>
+<li><strong>GAIA_DEV_PIXELS_PER_PX?=1</strong></li>
 </ul>
 
       
