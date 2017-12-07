@@ -15,7 +15,7 @@
 <meta property="og:url" content="//tanshizw.com/2017/12/04/Gaia-Makefile/index.html">
 <meta property="og:site_name" content="迎风布阵 逆水行舟">
 <meta property="og:description" content="Makefilehttps://github.com/zwts/gaia/blob/v2.2/Makefile 注释内容  Global configrations  GAIA_DOMAIN SYSTEM ADB DEBUG REPORTER MOZPREFOUT MARIONETTE_RUNNER_HOST COVERAGE GAIA_APP_CONFIG   Lint code  make h">
-<meta property="og:updated_time" content="2017-12-06T11:58:50.000Z">
+<meta property="og:updated_time" content="2017-12-07T10:42:11.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Gaia Makefile">
 <meta name="twitter:description" content="Makefilehttps://github.com/zwts/gaia/blob/v2.2/Makefile 注释内容  Global configrations  GAIA_DOMAIN SYSTEM ADB DEBUG REPORTER MOZPREFOUT MARIONETTE_RUNNER_HOST COVERAGE GAIA_APP_CONFIG   Lint code  make h">
@@ -215,7 +215,13 @@
 <li><strong>NO_LOCK_SCREEN?=0</strong>  是否默认打开锁屏</li>
 <li><strong>SCREEN_TIMEOUT?=-1</strong>  是否打开屏幕超时</li>
 <li><strong>PRODUCTION?=0</strong> 区别编译user/userdebug/eng版本</li>
-<li><strong>GAIA_OPTIMIZE?=0</strong></li>
+<li><strong>GAIA_OPTIMIZE?=0</strong>  webpp-optimize will do below things：<ol>
+<li>Inline embeded html from <link rel="import" href="test.html" name="name"> into html and commented(&lt;!–CONTENT–&gt;).</li>
+<li>Concat l10n resource to json files and put them as link and attach to html.</li>
+<li>Aggregate and uglify all JS files used in html to one JS file.</li>
+<li>Optimize inline JS/CSS content.</li>
+</ol>
+</li>
 <li><strong>GAIA_DEV_PIXELS_PER_PX?=1</strong></li>
 </ul>
 

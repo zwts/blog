@@ -212,7 +212,13 @@
 <li><strong>NO_LOCK_SCREEN?=0</strong>  是否默认打开锁屏</li>
 <li><strong>SCREEN_TIMEOUT?=-1</strong>  是否打开屏幕超时</li>
 <li><strong>PRODUCTION?=0</strong> 区别编译user/userdebug/eng版本</li>
-<li><strong>GAIA_OPTIMIZE?=0</strong></li>
+<li><strong>GAIA_OPTIMIZE?=0</strong>  webpp-optimize will do below things：<ol>
+<li>Inline embeded html from <link rel="import" href="test.html" name="name"> into html and commented(&lt;!–CONTENT–&gt;).</li>
+<li>Concat l10n resource to json files and put them as link and attach to html.</li>
+<li>Aggregate and uglify all JS files used in html to one JS file.</li>
+<li>Optimize inline JS/CSS content.</li>
+</ol>
+</li>
 <li><strong>GAIA_DEV_PIXELS_PER_PX?=1</strong></li>
 </ul>
 
