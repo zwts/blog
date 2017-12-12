@@ -164,6 +164,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h6 id="Makefile"><a href="#Makefile" class="headerlink" title="Makefile"></a>Makefile</h6><p><a href="https://github.com/zwts/gaia/blob/v2.2/Makefile" target="_blank" rel="external">https://github.com/zwts/gaia/blob/v2.2/Makefile</a></p>
+<p>Makefile 基础语法入门：<br><a href="http://www.ruanyifeng.com/blog/2015/02/make.html" target="_blank" rel="external">http://www.ruanyifeng.com/blog/2015/02/make.html</a></p>
 <p><strong>注释内容</strong></p>
 <ul>
 <li><p>Global configrations</p>
@@ -212,7 +213,7 @@
 <li><strong>NO_LOCK_SCREEN?=0</strong>  是否默认打开锁屏</li>
 <li><strong>SCREEN_TIMEOUT?=-1</strong>  是否打开屏幕超时</li>
 <li><strong>PRODUCTION?=0</strong> 区别编译user/userdebug/eng版本</li>
-<li><strong>GAIA_OPTIMIZE?=0</strong>  webpp-optimize will do below things：<ol>
+<li><strong>GAIA_OPTIMIZE?=0</strong><br>webpp-optimize will do below things：<ol>
 <li>Inline embeded html from <link rel="import" href="test.html" name="name"> into html and commented(&lt;!–CONTENT–&gt;).</li>
 <li>Concat l10n resource to json files and put them as link and attach to html.</li>
 <li>Aggregate and uglify all JS files used in html to one JS file.</li>
@@ -220,6 +221,40 @@
 </ol>
 </li>
 <li><strong>GAIA_DEV_PIXELS_PER_PX?=1</strong></li>
+<li><strong>P?=1</strong>  Parallel build for multicores CPU</li>
+<li><strong>GAIA_DPPX</strong> Alias of GAIA_DEV_PIXELS_PER_PX</li>
+<li><strong>DOGFOOD?=0</strong> dogfood测试，零时版本？会影响：<ul>
+<li>PRODUCTION</li>
+<li>GAIA_APP_TARGET=dogfood</li>
+<li>BUILD_CONFIG</li>
+</ul>
+</li>
+<li><strong>NODE_MODULES_SRC?=modules.tar</strong></li>
+<li><p><strong>NODE_MODULES_CACHEDIR=modules_tar_cachedir</strong></p>
+</li>
+<li><p><strong>GAIA_DEVICE_TYPE?=phone</strong> device type customization</p>
+<ol>
+<li>phone - default</li>
+<li>tablet</li>
+<li>tv</li>
+</ol>
+</li>
+<li><p><strong>TEST_AGENT_PORT?=8789</strong> use for:</p>
+<ol>
+<li>.PHONY: test-agent-server(.PHONY 声明伪目标，每次都执行，而不去监测是否存在目标文件)</li>
+<li>.PHONY: test-agent-test</li>
+</ol>
+</li>
+<li><strong>GAIA_APP_TARGET?=engineering</strong><br>use for build app list:<ol>
+<li>路径为gaia/build/config/phone/app-engineer.list</li>
+<li>GAIA_APP_CONFIG=$(GAIA_DIR)$(SEP)build$(SEP)config$(SEP)$(GAIA_DEVICE_TYPE)$(SEP)apps-$(GAIA_APP_TARGET).list <em>(Makefile line:350)</em></li>
+</ol>
+</li>
+<li><strong>DESKTOP?=$(DEBUG)</strong> Enable compatibility to run in Firefox Desktop</li>
+<li><strong>NOFTU?=0</strong> Disable first time experience screen 去掉开机设置向导相关内容</li>
+<li><strong>NOFTUPING?=0</strong> Disable first time ping</li>
+<li><strong>REMOTE_DEBUGGER?=0</strong> Automatically enable remote debugger</li>
+<li><strong>BUILD_DEBUG?=0</strong> Debug mode for build process</li>
 </ul>
 
       
