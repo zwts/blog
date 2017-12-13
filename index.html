@@ -174,7 +174,7 @@
 <li>ADB</li>
 <li>DEBUG</li>
 <li>REPORTER</li>
-<li>MOZPREFOUT</li>
+<li>MOZPREFOUT: File path to output mozperf data. Empty mean stdout.</li>
 <li>MARIONETTE_RUNNER_HOST</li>
 <li>COVERAGE</li>
 <li>GAIA_APP_CONFIG</li>
@@ -212,7 +212,7 @@
 <li><strong>DEVICE_DEBUG?=0</strong>  是否默认打开设备可调试</li>
 <li><strong>NO_LOCK_SCREEN?=0</strong>  是否默认打开锁屏</li>
 <li><strong>SCREEN_TIMEOUT?=-1</strong>  是否打开屏幕超时</li>
-<li><strong>PRODUCTION?=0</strong> 区别编译user/userdebug/eng版本</li>
+<li><strong>PRODUCTION?=0</strong> 区别编译user/userdebug/eng版本，PRODUCTION is also set for user and userdebug B2G builds(PRODUCTION=1)</li>
 <li><strong>GAIA_OPTIMIZE?=0</strong><br>webpp-optimize will do below things：<ol>
 <li>Inline embeded html from <link rel="import" href="test.html" name="name"> into html and commented(&lt;!–CONTENT–&gt;).</li>
 <li>Concat l10n resource to json files and put them as link and attach to html.</li>
@@ -223,13 +223,17 @@
 <li><strong>GAIA_DEV_PIXELS_PER_PX?=1</strong></li>
 <li><strong>P?=1</strong>  Parallel build for multicores CPU</li>
 <li><strong>GAIA_DPPX</strong> Alias of GAIA_DEV_PIXELS_PER_PX</li>
-<li><strong>DOGFOOD?=0</strong> dogfood测试，零时版本？会影响：<ul>
+<li><strong>DOGFOOD?=0</strong>dogfood测试，零时版本？会影响：<ul>
 <li>PRODUCTION</li>
 <li>GAIA_APP_TARGET=dogfood</li>
 <li>BUILD_CONFIG</li>
 </ul>
 </li>
-<li><strong>NODE_MODULES_SRC?=modules.tar</strong></li>
+<li><strong>NODE_MODULES_SRC</strong><ul>
+<li>git-gaia-node-modules</li>
+<li>modules.tar</li>
+</ul>
+</li>
 <li><p><strong>NODE_MODULES_CACHEDIR=modules_tar_cachedir</strong></p>
 </li>
 <li><p><strong>GAIA_DEVICE_TYPE?=phone</strong> device type customization</p>
@@ -253,8 +257,52 @@
 <li><strong>DESKTOP?=$(DEBUG)</strong> Enable compatibility to run in Firefox Desktop</li>
 <li><strong>NOFTU?=0</strong> Disable first time experience screen 去掉开机设置向导相关内容</li>
 <li><strong>NOFTUPING?=0</strong> Disable first time ping</li>
+<li><strong>FTU_PING_URL?=<a href="https://fxos.telemetry.mozilla.org/submit/telemetry" target="_blank" rel="external">https://fxos.telemetry.mozilla.org/submit/telemetry</a></strong> if NOFTUPING = 0</li>
 <li><strong>REMOTE_DEBUGGER?=0</strong> Automatically enable remote debugger</li>
 <li><strong>BUILD_DEBUG?=0</strong> Debug mode for build process</li>
+<li><strong>RAPTOR?=0</strong> Are we building for RAPTOR?<br>Raptor是一种可视化的程序设计环境，为程序和算法设计的基础课程的教学提供实验环境。使用RAPTOR设计的程序和算法可以直接转换成为C++、C#、Java等高级程序语言</li>
+<li><strong>SHARE_PERF_USAGE?=1</strong> Share performance and usage data</li>
+<li><strong>PROFILE_FOLDER</strong><ol>
+<li>profile(default)</li>
+<li>profile-debug(firefox Desktop/debug mode)</li>
+<li>profile-test(test-integration)</li>
+</ol>
+</li>
+<li><strong>STAGE_DIR</strong> gaia/build_stage</li>
+<li><strong>LOCAL_DOMAINS</strong></li>
+<li><strong>ADB?=adb</strong> 定义adb工具</li>
+<li><strong>SCHEME</strong> [skim] app://</li>
+<li><strong>SYSTEM</strong> system application url: app://system.gaiamobile.org</li>
+<li><strong>BUILD_APP_NAME</strong><br>正在编译的APP名字,可以在编译的时候在参数中用APP=ftu来指定</li>
+<li><p><strong>BUILDAPP?=desktop</strong> BUILDAPP variable defines the target b2g platform (eg desktop, device)<br>and exports it for the gaia-marionette script<br><a href="https://www.blackglory.me/experience-firefox-os/" target="_blank" rel="external">https://www.blackglory.me/experience-firefox-os/</a></p>
+</li>
+<li><p><strong>npm_config_loglevel=warn</strong> Ensure that NPM only logs warnings and errors</p>
+</li>
+<li><strong>REPORTER</strong><ul>
+<li>mocha-tbpl-reporter</li>
+<li>spec</li>
+</ul>
+</li>
+<li><strong>MARIONETTE_RUNNER_HOST</strong><ul>
+<li>marionette-socket-host</li>
+<li>marionette-b2gdesktop-host</li>
+</ul>
+</li>
+<li><p><strong>MAKECMDGOALS</strong> make 在执行时会设置一个特殊变量 – “MAKECMDGOALS” ，该变量记录了命令行参数指定的终极目标列表，没有通过参数指定终极目标时此变量为空。该变量仅限于用在特殊场合(比如判断)，在 Makefile 中最好不要对它进行重新定义。</p>
+<ul>
+<li>demo</li>
+<li>dogfood</li>
+<li>production</li>
+<li>test-integration</li>
+</ul>
+</li>
+<li><p><strong>GAIA_PORT?=:8080</strong> In debug mode the offline cache is not used (even if it is generated) and<br>Gaia is loaded by a built-in web server via port GAIA_PORT.</p>
+</li>
+<li><p><strong>SHELL := /bin/bash</strong> Force bash for all shell commands since we depend on bash-specific syntax</p>
+</li>
+<li><strong>GAIA_DIR := $(CURDIR)</strong> CURDIR是make的内嵌变量，自动设置为当前目录 </li>
+<li><strong>SYS=$(shell uname -s)</strong></li>
+<li><strong>ARCH?=$(shell uname -m)</strong> what OS are we on?</li>
 </ul>
 
       
