@@ -304,6 +304,30 @@
 <li><strong>SYS=$(shell uname -s)</strong></li>
 <li><strong>ARCH?=$(shell uname -m)</strong> what OS are we on?</li>
 </ul>
+<hr>
+<p>Configuration for pre-built or already downloaded b2g (or alternative)</p>
+<hr>
+<ul>
+<li><strong>USE_LOCAL_XULRUNNER_SDK</strong></li>
+<li><strong>XULRUNNER_DIRECTORY</strong></li>
+<li><strong>XPCSHELL_GUESS</strong>  Some guesswork to figure out where the xpcshell binary really is</li>
+</ul>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">XPCSHELL_GUESS = <span class="variable">$(<span class="built_in">firstword</span> $(<span class="built_in">wildcard</span> \</span></div><div class="line">    <span class="variable">$(XULRUNNER_DIRECTORY)</span>/B2G.app/Contents/MacOS/xpcshell \</div><div class="line">    <span class="variable">$(XULRUNNER_DIRECTORY)</span>/bin/XUL.framework/Versions/Current/xpcshell \</div><div class="line">    <span class="variable">$(XULRUNNER_DIRECTORY)</span>/bin/xpcshell* \</div><div class="line">    <span class="variable">$(XULRUNNER_DIRECTORY)</span>/b2g/xpcshell* \</div><div class="line">  ))</div></pre></td></tr></table></figure>
+<ul>
+<li><p><strong>XPCSHELLSDK</strong><br>XPCSHELL_GUESS =&gt; xpcshell</p>
+</li>
+<li><p><strong>XULRUNNERSDK</strong><br>XPCSHELLSDK/run-mozilla.sh</p>
+</li>
+</ul>
+<hr>
+<p>Configuration for a downloaded b2g desktop</p>
+<hr>
+<ul>
+<li><strong>B2G_SDK_VERSION</strong></li>
+<li><strong>B2G_SDK_DATE</strong></li>
+<li><strong>XULRUNNER_BASE_DIR</strong> b2g_sdk</li>
+<li><strong>XULRUNNER_DIRECTORY</strong></li>
+</ul>
 
       
 

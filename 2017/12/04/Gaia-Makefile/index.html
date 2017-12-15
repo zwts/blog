@@ -15,7 +15,7 @@
 <meta property="og:url" content="//tanshizw.com/2017/12/04/Gaia-Makefile/index.html">
 <meta property="og:site_name" content="迎风布阵 逆水行舟">
 <meta property="og:description" content="Makefilehttps://github.com/zwts/gaia/blob/v2.2/Makefile Makefile 基础语法入门：http://www.ruanyifeng.com/blog/2015/02/make.html 注释内容  Global configrations  GAIA_DOMAIN SYSTEM ADB DEBUG REPORTER MOZPREFOUT: F">
-<meta property="og:updated_time" content="2017-12-13T11:55:11.000Z">
+<meta property="og:updated_time" content="2017-12-15T02:50:16.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Gaia Makefile">
 <meta name="twitter:description" content="Makefilehttps://github.com/zwts/gaia/blob/v2.2/Makefile Makefile 基础语法入门：http://www.ruanyifeng.com/blog/2015/02/make.html 注释内容  Global configrations  GAIA_DOMAIN SYSTEM ADB DEBUG REPORTER MOZPREFOUT: F">
@@ -306,6 +306,30 @@
 <li><strong>GAIA_DIR := $(CURDIR)</strong> CURDIR是make的内嵌变量，自动设置为当前目录 </li>
 <li><strong>SYS=$(shell uname -s)</strong></li>
 <li><strong>ARCH?=$(shell uname -m)</strong> what OS are we on?</li>
+</ul>
+<hr>
+<p>Configuration for pre-built or already downloaded b2g (or alternative)</p>
+<hr>
+<ul>
+<li><strong>USE_LOCAL_XULRUNNER_SDK</strong></li>
+<li><strong>XULRUNNER_DIRECTORY</strong></li>
+<li><strong>XPCSHELL_GUESS</strong>  Some guesswork to figure out where the xpcshell binary really is</li>
+</ul>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">XPCSHELL_GUESS = <span class="variable">$(<span class="built_in">firstword</span> $(<span class="built_in">wildcard</span> \</span></div><div class="line">    <span class="variable">$(XULRUNNER_DIRECTORY)</span>/B2G.app/Contents/MacOS/xpcshell \</div><div class="line">    <span class="variable">$(XULRUNNER_DIRECTORY)</span>/bin/XUL.framework/Versions/Current/xpcshell \</div><div class="line">    <span class="variable">$(XULRUNNER_DIRECTORY)</span>/bin/xpcshell* \</div><div class="line">    <span class="variable">$(XULRUNNER_DIRECTORY)</span>/b2g/xpcshell* \</div><div class="line">  ))</div></pre></td></tr></table></figure>
+<ul>
+<li><p><strong>XPCSHELLSDK</strong><br>XPCSHELL_GUESS =&gt; xpcshell</p>
+</li>
+<li><p><strong>XULRUNNERSDK</strong><br>XPCSHELLSDK/run-mozilla.sh</p>
+</li>
+</ul>
+<hr>
+<p>Configuration for a downloaded b2g desktop</p>
+<hr>
+<ul>
+<li><strong>B2G_SDK_VERSION</strong></li>
+<li><strong>B2G_SDK_DATE</strong></li>
+<li><strong>XULRUNNER_BASE_DIR</strong> b2g_sdk</li>
+<li><strong>XULRUNNER_DIRECTORY</strong></li>
 </ul>
 
       
