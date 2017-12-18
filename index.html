@@ -326,7 +326,13 @@
 <li><strong>B2G_SDK_VERSION</strong></li>
 <li><strong>B2G_SDK_DATE</strong></li>
 <li><strong>XULRUNNER_BASE_DIR</strong> b2g_sdk</li>
-<li><strong>XULRUNNER_DIRECTORY</strong></li>
+<li><p><strong>XULRUNNER_DIRECTORY</strong></p>
+</li>
+<li><p><strong>B2G_SDK_URL_BASE</strong> := <a href="http://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/$(B2G_SDK_DATE)-mozilla-central" target="_blank" rel="external">http://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/$(B2G_SDK_DATE)-mozilla-central</a></p>
+</li>
+<li><strong>B2G_SDK_FILE_NAME</strong> := b2g-$(B2G_SDK_VERSION).multi.$(B2G_SDK_OS).$(B2G_SDK_EXT)</li>
+<li><strong>B2G_SDK_URL</strong> := $(B2G_SDK_URL_BASE)/$(B2G_SDK_FILE_NAME)</li>
+<li><strong>B2G_SDK_URL_FILE</strong> := $(XULRUNNER_DIRECTORY)/.b2g.url</li>
 </ul>
 
       
