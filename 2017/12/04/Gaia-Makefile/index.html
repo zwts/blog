@@ -15,7 +15,7 @@
 <meta property="og:url" content="//tanshizw.com/2017/12/04/Gaia-Makefile/index.html">
 <meta property="og:site_name" content="迎风布阵 逆水行舟">
 <meta property="og:description" content="Makefilehttps://github.com/zwts/gaia/blob/v2.2/Makefile Makefile 基础语法入门：http://www.ruanyifeng.com/blog/2015/02/make.html 注释内容  Global configrations  GAIA_DOMAIN SYSTEM ADB DEBUG REPORTER MOZPREFOUT: F">
-<meta property="og:updated_time" content="2017-12-26T10:48:20.000Z">
+<meta property="og:updated_time" content="2017-12-31T12:27:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Gaia Makefile">
 <meta name="twitter:description" content="Makefilehttps://github.com/zwts/gaia/blob/v2.2/Makefile Makefile 基础语法入门：http://www.ruanyifeng.com/blog/2015/02/make.html 注释内容  Global configrations  GAIA_DOMAIN SYSTEM ADB DEBUG REPORTER MOZPREFOUT: F">
@@ -349,6 +349,43 @@
 <li><strong>GAIA_DEFAULT_LOCALE</strong> en-US</li>
 <li><strong>GAIA_PRETRANSLATE</strong></li>
 <li><strong>GAIA_CONCAT_LOCALES</strong></li>
+<li><strong>MD5SUM</strong>  md5sum -b</li>
+<li><strong>SED_INPLACE_NO_SUFFIX</strong> sed -i</li>
+<li><strong>DOWNLOAD_CMD</strong> wget $(WGET_OPTS)</li>
+<li><strong>TAR_WILDCARDS</strong> tar –wildcards</li>
+<li><p><strong>Test agent</strong></p>
+<ul>
+<li>TEST_AGENT_CONFIG</li>
+<li>TEST_AGENT_COVERAGE</li>
+<li>TEST_COMMON</li>
+<li>NODEJS</li>
+<li>NPM</li>
+</ul>
+</li>
+<li><p><strong>Marionette testing variables</strong></p>
+<ul>
+<li>make sure we’re python 2.7.x</li>
+<li>MARIONETTE_HOST ?= localhost</li>
+<li>MARIONETTE_PORT ?= 2828</li>
+</ul>
+</li>
+<li><p><strong>BUILD_CONFIG</strong></p>
+</li>
+<li><p><strong>Generate profile</strong></p>
+<ul>
+<li>target: PROFILE_FOLDER</li>
+<li>need:<ul>
+<li>profile-dir: @test -d $(PROFILE_FOLDER) || mkdir -p $(PROFILE_FOLDER)</li>
+<li>build-app</li>
+<li>test-agent-config</li>
+<li>contacts</li>
+<li>extensions</li>
+<li>b2g_sdk</li>
+<li>.git/hooks/pre-commit</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
       

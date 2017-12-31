@@ -346,6 +346,43 @@
 <li><strong>GAIA_DEFAULT_LOCALE</strong> en-US</li>
 <li><strong>GAIA_PRETRANSLATE</strong></li>
 <li><strong>GAIA_CONCAT_LOCALES</strong></li>
+<li><strong>MD5SUM</strong>  md5sum -b</li>
+<li><strong>SED_INPLACE_NO_SUFFIX</strong> sed -i</li>
+<li><strong>DOWNLOAD_CMD</strong> wget $(WGET_OPTS)</li>
+<li><strong>TAR_WILDCARDS</strong> tar –wildcards</li>
+<li><p><strong>Test agent</strong></p>
+<ul>
+<li>TEST_AGENT_CONFIG</li>
+<li>TEST_AGENT_COVERAGE</li>
+<li>TEST_COMMON</li>
+<li>NODEJS</li>
+<li>NPM</li>
+</ul>
+</li>
+<li><p><strong>Marionette testing variables</strong></p>
+<ul>
+<li>make sure we’re python 2.7.x</li>
+<li>MARIONETTE_HOST ?= localhost</li>
+<li>MARIONETTE_PORT ?= 2828</li>
+</ul>
+</li>
+<li><p><strong>BUILD_CONFIG</strong></p>
+</li>
+<li><p><strong>Generate profile</strong></p>
+<ul>
+<li>target: PROFILE_FOLDER</li>
+<li>need:<ul>
+<li>profile-dir: @test -d $(PROFILE_FOLDER) || mkdir -p $(PROFILE_FOLDER)</li>
+<li>build-app</li>
+<li>test-agent-config</li>
+<li>contacts</li>
+<li>extensions</li>
+<li>b2g_sdk</li>
+<li>.git/hooks/pre-commit</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
       
