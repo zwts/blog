@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="//tanshizw.com">
   <title>Professional Javascript part 1 | 迎风布阵 逆水行舟</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="JS组成 ECMAScript，提供核心语言功能 DOM，提供访问和操作网页内容的方法和接口 BOM，提供和浏览器交互的方法   标签 延时脚本，defer属性：可以让脚本在文档完全呈现之后再执行，总是按照顺序执行。 异步脚本，async属性：表示当前脚本不必等待其他脚本，也不必阻塞文档的呈现，且不保证异步的脚本按照它们在页面中出现的顺序执行。  ####### 文档模式  HTML5: &amp;lt;">
+  <meta name="description" content="JS组成 ECMAScript，提供核心语言功能 DOM，提供访问和操作网页内容的方法和接口 BOM，提供和浏览器交互的方法  script 标签 延时脚本，defer属性：可以让脚本在文档完全呈现之后再执行，总是按照顺序执行。 异步脚本，async属性：表示当前脚本不必等待其他脚本，也不必阻塞文档的呈现，且不保证异步的脚本按照它们在页面中出现的顺序执行。  文档模式 HTML5: &amp;lt;!DO">
 <meta name="keywords">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Professional Javascript part 1">
 <meta property="og:url" content="//tanshizw.com/2018/01/11/Professional-Javascript-part-1/index.html">
 <meta property="og:site_name" content="迎风布阵 逆水行舟">
-<meta property="og:description" content="JS组成 ECMAScript，提供核心语言功能 DOM，提供访问和操作网页内容的方法和接口 BOM，提供和浏览器交互的方法   标签 延时脚本，defer属性：可以让脚本在文档完全呈现之后再执行，总是按照顺序执行。 异步脚本，async属性：表示当前脚本不必等待其他脚本，也不必阻塞文档的呈现，且不保证异步的脚本按照它们在页面中出现的顺序执行。  ####### 文档模式  HTML5: &amp;lt;">
-<meta property="og:updated_time" content="2018-01-11T10:30:59.000Z">
+<meta property="og:description" content="JS组成 ECMAScript，提供核心语言功能 DOM，提供访问和操作网页内容的方法和接口 BOM，提供和浏览器交互的方法  script 标签 延时脚本，defer属性：可以让脚本在文档完全呈现之后再执行，总是按照顺序执行。 异步脚本，async属性：表示当前脚本不必等待其他脚本，也不必阻塞文档的呈现，且不保证异步的脚本按照它们在页面中出现的顺序执行。  文档模式 HTML5: &amp;lt;!DO">
+<meta property="og:updated_time" content="2018-01-11T10:33:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Professional Javascript part 1">
-<meta name="twitter:description" content="JS组成 ECMAScript，提供核心语言功能 DOM，提供访问和操作网页内容的方法和接口 BOM，提供和浏览器交互的方法   标签 延时脚本，defer属性：可以让脚本在文档完全呈现之后再执行，总是按照顺序执行。 异步脚本，async属性：表示当前脚本不必等待其他脚本，也不必阻塞文档的呈现，且不保证异步的脚本按照它们在页面中出现的顺序执行。  ####### 文档模式  HTML5: &amp;lt;">
+<meta name="twitter:description" content="JS组成 ECMAScript，提供核心语言功能 DOM，提供访问和操作网页内容的方法和接口 BOM，提供和浏览器交互的方法  script 标签 延时脚本，defer属性：可以让脚本在文档完全呈现之后再执行，总是按照顺序执行。 异步脚本，async属性：表示当前脚本不必等待其他脚本，也不必阻塞文档的呈现，且不保证异步的脚本按照它们在页面中出现的顺序执行。  文档模式 HTML5: &amp;lt;!DO">
   
     <link rel="alternative" href="/atom.xml" title="迎风布阵 逆水行舟" type="application/atom+xml">
   
@@ -171,12 +171,11 @@
 <li>DOM，提供访问和操作网页内容的方法和接口</li>
 <li>BOM，提供和浏览器交互的方法</li>
 </ul>
-<h6 id="标签"><a href="#标签" class="headerlink" title=" 标签"></a><script> 标签</h6><ul>
+<h6 id="script-标签"><a href="#script-标签" class="headerlink" title="script 标签"></a>script 标签</h6><ul>
 <li>延时脚本，defer属性：可以让脚本在文档完全呈现之后再执行，总是按照顺序执行。</li>
 <li>异步脚本，async属性：表示当前脚本不必等待其他脚本，也不必阻塞文档的呈现，且不保证异步的脚本按照它们在页面中出现的顺序执行。</li>
 </ul>
-<p>####### 文档模式</p>
-<ul>
+<h6 id="文档模式"><a href="#文档模式" class="headerlink" title="文档模式"></a>文档模式</h6><ul>
 <li>HTML5: &lt;!DOCTYPE html&gt;</li>
 <li>其他模式</li>
 </ul>
@@ -186,8 +185,7 @@
 <li>严格模式：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">'use strict'</span>;</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>####### 数据类型</p>
-<ul>
+<h6 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h6><ul>
 <li>Undefined</li>
 <li>Null</li>
 <li>Boolean</li>
@@ -195,7 +193,7 @@
 <li>Number</li>
 <li>Object</li>
 </ul>
-</script></h6>
+
       
 
       
