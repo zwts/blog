@@ -143,6 +143,75 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Algorithms-part-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/12/Algorithms-part-1/">Algorithms part 1</a>
+    </h1>
+  
+
+        
+        <a href="/2018/01/12/Algorithms-part-1/" class="archive-article-date">
+  	<time datetime="2018-01-12T10:31:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>数据结构：便于算法操作的组织数据的方法</li>
+<li>基础编程模型</li>
+<li>数据抽象</li>
+<li><p>抽象数据类型</p>
+<ul>
+<li>背包</li>
+<li>队列</li>
+<li>栈</li>
+</ul>
+</li>
+<li><p>经典的 union-find 抽象数据结构</p>
+</li>
+</ul>
+<h5 id="欧几里得算法（找最大公约数）"><a href="#欧几里得算法（找最大公约数）" class="headerlink" title="欧几里得算法（找最大公约数）"></a>欧几里得算法（找最大公约数）</h5><ul>
+<li><p>自然语言描述：</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">计算两个非负整数p和q的最大公约数：若q是<span class="number">0</span>，则最大公约数为p。否则将p除以q得到余数r，p和q的最大公约数即为q和r的最大公约数。</div></pre></td></tr></table></figure>
+</li>
+<li><p>JavaScript语言描述</p>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// p, q 为非负整数</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">gcd</span>(<span class="params">p, q</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (q === <span class="number">0</span>) &#123;</div><div class="line">    <span class="keyword">return</span> p;</div><div class="line">  &#125;</div><div class="line">  </div><div class="line">  <span class="keyword">let</span> r = p % q;</div><div class="line">  <span class="keyword">return</span> gcd(q, r);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/01/12/Algorithms-part-1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-Professional-Javascript-part-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -868,97 +937,9 @@
 
 
   
-    <article id="post-Ninja-Javascript-Part-4" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/15/Ninja-Javascript-Part-4/">Ninja Javascript Part 4</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/15/Ninja-Javascript-Part-4/" class="archive-article-date">
-  	<time datetime="2017-11-15T11:59:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="正则"><a href="#正则" class="headerlink" title="正则"></a>正则</h4><ul>
-<li><h6 id="正则字面量"><a href="#正则字面量" class="headerlink" title="正则字面量"></a>正则字面量</h6>正则字面量用正斜杠界定:</li>
-</ul>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">var pattern</span> = /test/;</div><div class="line"><span class="attribute">var pattern</span> = /test/ig;</div></pre></td></tr></table></figure>
-<ul>
-<li><h6 id="构造RegExp实例"><a href="#构造RegExp实例" class="headerlink" title="构造RegExp实例"></a>构造RegExp实例</h6></li>
-</ul>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> pattern = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"test"</span>);</div><div class="line"><span class="keyword">var</span> pattern = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"test"</span>, <span class="string">"ig"</span>);</div></pre></td></tr></table></figure>
-<p>如果正则是已知的，优先选择字面量语法，而构造器的方式多用在运行时。</p>
-<ul>
-<li><h6 id="3个标志"><a href="#3个标志" class="headerlink" title="3个标志"></a>3个标志</h6></li>
-<li>i: 让正则表达式不区分大小写</li>
-<li>g: 匹配模式中的所有实例</li>
-<li><p>m: 允许匹配多行</p>
-</li>
-<li><h6 id="匹配一类"><a href="#匹配一类" class="headerlink" title="匹配一类"></a>匹配一类</h6></li>
-<li>[abc]: a或b或c</li>
-<li>[^abc]: abc以外的任意字符</li>
-<li><p>[a-m]: a到m之间的所有字符</p>
-</li>
-<li><h6 id="重复出现"><a href="#重复出现" class="headerlink" title="重复出现"></a>重复出现</h6></li>
-<li>?: 出现1次或根本不出现</li>
-<li>+: 字符出现1次或者多次</li>
-<li>*: 字符出现0次或者多次</li>
-<li>a{4}: a连续出现4次</li>
-<li>a{4, 10}: a连续出现4次到10次之间的随意值</li>
-<li><p>a{4,}: a连续出现4次以上的次数</p>
-</li>
-<li><h6 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h6><p>/(ab)+/ 匹配1个或者多个连续出现的字符串ab。</p>
-</li>
-<li><h6 id="反向引用"><a href="#反向引用" class="headerlink" title="反向引用"></a>反向引用</h6><p>在正则中所定义的捕获的反向引用。/^([dtn])a\1/，可以是任意1个以d，t，n开头的，并且后面跟着1个a字符，并且后面跟着的是和第一个捕获相同的字符的字符串。dad</p>
-</li>
-</ul>
-<p>捕获和表达式分组都使用小括号表示。</p>
-<p>被动子表达式，阻止不必要的捕获: /((?:nijia-)+)sword/ ,防止任何意外的捕获，所以在确定表达式是只用于分组时，需要使用 被动子表达式”?:”。</p>
-<ul>
-<li><h6 id="常用方案"><a href="#常用方案" class="headerlink" title="常用方案"></a>常用方案</h6></li>
-<li>/[\S\s]/ 匹配所有字符包括换行符。</li>
-<li>/^\s+|\s+$/g 匹配所有开头或者结尾的空格。</li>
-<li>/[\w\u0080-\uFFFF_-]+/ 匹配包括Unicode在内的所有字符</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/15/Ninja-Javascript-Part-4/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 
