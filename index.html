@@ -143,6 +143,70 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-What-is-HTML5" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/17/What-is-HTML5/">What is HTML5</a>
+    </h1>
+  
+
+        
+        <a href="/2018/04/17/What-is-HTML5/" class="archive-article-date">
+  	<time datetime="2018-04-17T07:10:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>HTML5：HTML5 是定义 HTML 标准的最新的版本。 该术语表示两个不同的概念：</p>
+<p>它是一个新版本的HTML语言，具有新的元素，属性和行为，<br>它有更大的技术集，允许更多样化和强大的网站和应用程序。这个集合有时称为HTML5和朋友，通常缩写为HTML5</p>
+<ul>
+<li>文件类型声明只有&lt;!DOCTYPE HTML&gt;</li>
+<li>相对之前版本新增、移除一些标签（移除center、font 等,新增nav、footer等）</li>
+<li>Accessibility（无障碍）</li>
+<li>新的API: <ul>
+<li>Geolocation: navigator.geolocation.getCurrentPosition(callback)</li>
+<li>Drag and Drop</li>
+<li>Local Storage</li>
+<li>Web Workers: 是运行在后台的 JavaScript，独立于其他脚本，不会影响页面的性能。</li>
+<li>SSE: SSE（Server-Sent Events，服务器发送事件）就是浏览器向服务器发送一个HTTP请求，然后服务器不断单向地向浏览器推送“信息”。</li>
+<li>Canvas/WebGL</li>
+<li>Audio/Video</li>
+</ul>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/04/17/What-is-HTML5/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-Algorithms-part-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -851,78 +915,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/11/27/Ninja-Javascript-Part-6/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-Ninja-Javascript-Part-5" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/21/Ninja-Javascript-Part-5/">Ninja Javascript Part 5</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/21/Ninja-Javascript-Part-5/" class="archive-article-date">
-  	<time datetime="2017-11-21T12:02:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h6 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h6><p>在<strong>Web worker</strong>(?web worker 是运行在后台的 JavaScript，独立于其他脚本，不会影响页面的性能)可用之前，++浏览器的所有Javascript代码都是在单线程中执行的++。异步事件的处理程序，如用户界面事件和定时器，在线程中没有代码执行的时候才执行，处理程序在执行时必须排队，并且一个处理程序不能中断另一个。</p>
-<ul>
-<li><p>Javascript 是单线程的</p>
-<ol>
-<li>Javascript 运行在浏览器中，是单线程的，每个windows一个线程。</li>
-<li>浏览器是事件驱动，很多行为异步的，会创建事件并放入执行队列中。</li>
-<li>Javascript 引擎单线程处理它的任务队列，也就是普通函数和回调函数组成的队列。</li>
-<li>异步事件发生时，会把异步执行的callback放入队列，并等待当前代码执行完成。</li>
-</ol>
-</li>
-<li><p>浏览器不是单线程的</p>
-<ol>
-<li>javascript 引擎线程</li>
-<li>界面渲染线程</li>
-<li>浏览器事件触发线程</li>
-<li>http请求线程(Ajax)</li>
-</ol>
-</li>
-<li><p>Ajax 异步</p>
-<p>Ajax请求确实是异步的，这请求是由浏览器新开一个线程请求，事件回调的时候是放入Event loop单线程事件队列等候处理。</p>
-</li>
-<li><p>利用定时器分解长时间任务<br>setTimeout(fun, 0) </p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> count = <span class="number">2000</span>;</div><div class="line"><span class="keyword">var</span> divide = <span class="number">4</span>;</div><div class="line"><span class="keyword">var</span> chunkSize = count/divide;</div><div class="line"><span class="keyword">var</span> iteration = <span class="number">0</span>;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> table = <span class="built_in">document</span>.createElement(<span class="string">'tbody'</span>);</div><div class="line"></div><div class="line">setTimeout(<span class="function"><span class="keyword">function</span> <span class="title">generateRows</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> base = (chunkSize) * iteration;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; chunkSize; i++) &#123;</div><div class="line">        <span class="keyword">let</span> tr = <span class="built_in">document</span>.createElement(<span class="string">'tr'</span>);</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> t = <span class="number">0</span>; t &lt; <span class="number">6</span>; t++) &#123;</div><div class="line">            <span class="keyword">let</span> td = <span class="built_in">document</span>.createElement(<span class="string">'td'</span>);</div><div class="line">            td.appendChild(<span class="built_in">document</span>.createTextNode((i + base) + <span class="string">","</span> + t + <span class="string">','</span> + iteration));</div><div class="line">            tr.appendChild(td);</div><div class="line">        &#125;</div><div class="line">        table.appendChild(tr);</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    iteration++;</div><div class="line">    <span class="keyword">if</span> (iteration &lt; divide) &#123;</div><div class="line">        setTimeout(generateRows, <span class="number">0</span>);</div><div class="line">    &#125;</div><div class="line">&#125;, <span class="number">0</span>);</div></pre></td></tr></table></figure>
-</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/21/Ninja-Javascript-Part-5/">展开全文 >></a>
         </p>
       
 
