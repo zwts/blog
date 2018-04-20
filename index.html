@@ -143,6 +143,103 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-ES6-part1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/19/ES6-part1/">ES6 let/const/解构赋值/模版字符串</a>
+    </h1>
+  
+
+        
+        <a href="/2018/04/19/ES6-part1/" class="archive-article-date">
+  	<time datetime="2018-04-19T08:22:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="let"><a href="#let" class="headerlink" title="let"></a>let</h5><ul>
+<li>它声明的变量只在let命令所在的代码块内有效。代码块由{}表示。</li>
+<li>相较于var不存在变量提升。(undefined, ReferenceError)</li>
+<li>let命令声明变量之前，该变量都是不可用的。(暂时性死区)</li>
+<li>块级作用域内不允许重复声明</li>
+</ul>
+<h5 id="const"><a href="#const" class="headerlink" title="const"></a>const</h5><ul>
+<li>声明一个只读常量。</li>
+<li>声明需要立即初始化。</li>
+<li>只在声明的块级作用域内有效</li>
+<li>存在暂时性死区</li>
+<li>块级作用域内不允许重复声明</li>
+</ul>
+<h5 id="解构赋值"><a href="#解构赋值" class="headerlink" title="解构赋值"></a>解构赋值</h5><ul>
+<li><p>解构成功</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">let [a, b, c] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</div></pre></td></tr></table></figure>
+</li>
+<li><p>解构不成功</p>
+</li>
+</ul>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">let <span class="string">[bar, foo]</span> = <span class="string">[1]</span>;</div></pre></td></tr></table></figure>
+<ul>
+<li>不完全解构</li>
+</ul>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">let [x, y] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</div></pre></td></tr></table></figure>
+<ul>
+<li>只要某种数据结构具有 Iterator 接口，都可以采用数组形式的解构赋值。</li>
+<li><p>允许默认值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> [x, y = <span class="string">'b'</span>] = [<span class="string">'a'</span>, <span class="literal">undefined</span>];</div><div class="line"><span class="comment">// x='a', y='b', 必须严格等于undfined</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>对象解构：对象的属性没有次序，变量必须与属性同名，才能取到正确的值</p>
+</li>
+<li><p>用途：</p>
+<ul>
+<li>交换变量的值</li>
+<li>从函数返回多个值</li>
+<li>函数参数的定义</li>
+<li>提取 JSON 数据</li>
+<li>函数参数的默认值</li>
+<li>遍历 Map 结构</li>
+<li>输入模块的指定方法</li>
+</ul>
+<h5 id="字符串拓展"><a href="#字符串拓展" class="headerlink" title="字符串拓展"></a>字符串拓展</h5></li>
+<li><p><strong>模板字符串</strong>（template string）是增强版的字符串，用反引号（`）标识。它可以当作普通字符串使用，也可以用来定义多行字符串，或者在字符串中嵌入变量。</p>
+<figure class="highlight dust"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="xml">$('#result').append(`</span></div><div class="line">  There are <span class="tag">&lt;<span class="name">b</span>&gt;</span>$<span class="template-variable">&#123;basket.count&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">b</span>&gt;</span> items</span></div><div class="line">   in your basket, <span class="tag">&lt;<span class="name">em</span>&gt;</span>$<span class="template-variable">&#123;basket.onSale&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">em</span>&gt;</span></span></div><div class="line">  are on sale!</div><div class="line">`);</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>charAt()/at()</strong> 前者不能识别大于码点大于0xffff的字符，后者可以。</p>
+</li>
+<li><strong>includes()/startsWith()/endsWith()</strong> 作用与indexOf类似，判断是否包含字符串/以目标字串开始/以目标字串结束</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/04/19/ES6-part1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-What-is-HTML5" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -861,60 +958,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/11/29/FFOS-Part-1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-Ninja-Javascript-Part-6" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/27/Ninja-Javascript-Part-6/">Ninja Javascript Part 6</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/27/Ninja-Javascript-Part-6/" class="archive-article-date">
-  	<time datetime="2017-11-27T12:06:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h6 id="DOM特性和DOM属性"><a href="#DOM特性和DOM属性" class="headerlink" title="DOM特性和DOM属性"></a>DOM特性和DOM属性</h6><ul>
-<li>访问特性值：getAttribute／setAttribute 或者使用DOM对象上与之对应的属性。</li>
-</ul>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">e.getAttribute('<span class="built_in">id</span>')</div><div class="line">e.<span class="built_in">id</span></div></pre></td></tr></table></figure>
-<p>id 的属性和特性以某种方式联系在一起，修改属性值也会改变特性值，但它们并没有共享一个相同的值。</p>
-<p>一些特性名和属性名不同的情况:<br>class/className, tabindex/tabIndex 等等。</p>
-<h6 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h6><p>在冒泡阶段，事件将从事件源传播到DOM的根节点；而在捕获阶段，事件则是从DOM根节点遍历传播到事件源上。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/27/Ninja-Javascript-Part-6/">展开全文 >></a>
         </p>
       
 
