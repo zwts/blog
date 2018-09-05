@@ -143,6 +143,60 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-How-B2G-talk-to-lower-layer" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/05/How-B2G-talk-to-lower-layer/">How B2G talk to lower layer</a>
+    </h1>
+  
+
+        
+        <a href="/2018/09/05/How-B2G-talk-to-lower-layer/" class="archive-article-date">
+  	<time datetime="2018-09-05T03:29:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="Android-hardware-abstraction-layer-HAL"><a href="#Android-hardware-abstraction-layer-HAL" class="headerlink" title="Android hardware abstraction layer (HAL)"></a>Android hardware abstraction layer (HAL)</h5><p>gecko/hal/gonk/GonkHal.cpp<br>gecko/dom/system/gonk/GonkGPSGelocationProvider.cpp<br>gecko/dom/camera/GonkCameraManager.cpp<br>Use hw_get_module Android HAL layer Interface<br><a href="http://emb.hqyj.com/Column/Column733.htm" target="_blank" rel="external">http://emb.hqyj.com/Column/Column733.htm</a></p>
+<h5 id="Unix-domain-socket"><a href="#Unix-domain-socket" class="headerlink" title="Unix domain socket"></a>Unix domain socket</h5><p>rilproxy/src/rilproxy.c<br>Use socket_local_server connect to rilproxy socket</p>
+<h5 id="Remote-Procedure-Call-RPC-binder"><a href="#Remote-Procedure-Call-RPC-binder" class="headerlink" title="Remote Procedure Call(RPC) / binder"></a>Remote Procedure Call(RPC) / binder</h5><p>gecko/dom/system/gonk/AudioManager.cpp<br>gecko/media/libsydneyaudio/src/gonk/AudioSystem.h<br>frameworks/base/media/libmedia/AudioSystem.cpp<br>Use binder = sm-&gt;getService()<br><a href="https://blog.csdn.net/freekiteyu/article/details/70082302" target="_blank" rel="external">https://blog.csdn.net/freekiteyu/article/details/70082302</a></p>
+<h5 id="Use-‘proc’-‘system’-file-system"><a href="#Use-‘proc’-‘system’-file-system" class="headerlink" title="Use ‘proc’ , ‘system’  file system"></a>Use ‘proc’ , ‘system’  file system</h5><p>gecko/hal/gonk/GonkHal.cpp<br>Use fopen to open battery file node</p>
+<h5 id="Shared-library"><a href="#Shared-library" class="headerlink" title="Shared library"></a>Shared library</h5><p>gecko/dom/wifi/libhardware_legacy.js<br>ctypes.open(“libhardware_legacy.so”);<br><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/js-ctypes/Using_js-ctypes" target="_blank" rel="external">https://developer.mozilla.org/zh-CN/docs/Mozilla/js-ctypes/Using_js-ctypes</a></p>
+<h5 id="System-call"><a href="#System-call" class="headerlink" title="System call"></a>System call</h5><p>gecko/hal/gonk/GonkHal.cpp<br>Use syscall of Linux</p>
+<p>gecko/hal/linux/LinuxPower.cpp<br>Use reboot of Linux<br><a href="https://blog.csdn.net/qingkongyeyue/article/details/71597783" target="_blank" rel="external">https://blog.csdn.net/qingkongyeyue/article/details/71597783</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/09/05/How-B2G-talk-to-lower-layer/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-ES6-part1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -887,77 +941,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/11/30/FFOS-Part-2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-FFOS-Part-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/29/FFOS-Part-1/">FFOS Part 1</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/29/FFOS-Part-1/" class="archive-article-date">
-  	<time datetime="2017-11-29T09:36:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h6 id="Architecture"><a href="#Architecture" class="headerlink" title="Architecture"></a>Architecture</h6><p><strong>Gaia</strong></p>
-<ul>
-<li>Applications and UI</li>
-<li>Third-party application can be installed</li>
-</ul>
-<p><strong>Gecko</strong></p>
-<ul>
-<li>JS Runtime (?)</li>
-<li>APIs</li>
-<li>Consists: network stack, graph stack, layout engine, virtual machine(for JS), porting layers</li>
-</ul>
-<p><strong>Gonk</strong></p>
-<ul>
-<li>Linux Kernel</li>
-<li>Device Drivers</li>
-<li>Hardware Abstraction Layer</li>
-</ul>
-<h6 id="Start-up"><a href="#Start-up" class="headerlink" title="Start up"></a>Start up</h6><ol>
-<li>Primary bootloader (usually show the first flash screen)</li>
-<li>Linux Kernel and Modem</li>
-<li>The end of bootstrapping process modem image loaded.</li>
-<li>The end of kernel startup, userspace “init” process launched</li>
-<li>A ramdisk mounted</li>
-</ol>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/29/FFOS-Part-1/">展开全文 >></a>
         </p>
       
 

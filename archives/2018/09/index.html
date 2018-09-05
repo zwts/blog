@@ -6,19 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//tanshizw.com">
-  <title>ES6 let/const/解构赋值/模版字符串 | 迎风布阵 逆水行舟</title>
+  <title>Archives: 2018/9 | 迎风布阵 逆水行舟</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="let 它声明的变量只在let命令所在的代码块内有效。代码块由{}表示。 相较于var不存在变量提升。(undefined, ReferenceError) let命令声明变量之前，该变量都是不可用的。(暂时性死区) 块级作用域内不允许重复声明  const 声明一个只读常量。 声明需要立即初始化。 只在声明的块级作用域内有效 存在暂时性死区 块级作用域内不允许重复声明  解构赋值 解构成功 1l">
-<meta name="keywords">
-<meta property="og:type" content="article">
-<meta property="og:title" content="ES6 let/const/解构赋值/模版字符串">
-<meta property="og:url" content="//tanshizw.com/2018/04/19/ES6-part1/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="迎风布阵 逆水行舟">
+<meta property="og:url" content="//tanshizw.com/archives/2018/09/index.html">
 <meta property="og:site_name" content="迎风布阵 逆水行舟">
-<meta property="og:description" content="let 它声明的变量只在let命令所在的代码块内有效。代码块由{}表示。 相较于var不存在变量提升。(undefined, ReferenceError) let命令声明变量之前，该变量都是不可用的。(暂时性死区) 块级作用域内不允许重复声明  const 声明一个只读常量。 声明需要立即初始化。 只在声明的块级作用域内有效 存在暂时性死区 块级作用域内不允许重复声明  解构赋值 解构成功 1l">
-<meta property="og:updated_time" content="2018-04-25T09:04:41.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ES6 let/const/解构赋值/模版字符串">
-<meta name="twitter:description" content="let 它声明的变量只在let命令所在的代码块内有效。代码块由{}表示。 相较于var不存在变量提升。(undefined, ReferenceError) let命令声明变量之前，该变量都是不可用的。(暂时性死区) 块级作用域内不允许重复声明  const 声明一个只读常量。 声明需要立即初始化。 只在声明的块级作用域内有效 存在暂时性死区 块级作用域内不允许重复声明  解构赋值 解构成功 1l">
+<meta name="twitter:title" content="迎风布阵 逆水行舟">
   
     <link rel="alternative" href="/atom.xml" title="迎风布阵 逆水行舟" type="application/atom+xml">
   
@@ -146,207 +141,49 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-ES6-part1" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      ES6 let/const/解构赋值/模版字符串
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2018/09/05/How-B2G-talk-to-lower-layer/" class="archive-article-date">
+  	<time datetime="2018-09-05T03:29:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-05</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2018/09/05/How-B2G-talk-to-lower-layer/">How B2G talk to lower layer</a>
     </h1>
   
 
-        
-        <a href="/2018/04/19/ES6-part1/" class="archive-article-date">
-  	<time datetime="2018-04-19T08:22:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="let"><a href="#let" class="headerlink" title="let"></a>let</h5><ul>
-<li>它声明的变量只在let命令所在的代码块内有效。代码块由{}表示。</li>
-<li>相较于var不存在变量提升。(undefined, ReferenceError)</li>
-<li>let命令声明变量之前，该变量都是不可用的。(暂时性死区)</li>
-<li>块级作用域内不允许重复声明</li>
-</ul>
-<h5 id="const"><a href="#const" class="headerlink" title="const"></a>const</h5><ul>
-<li>声明一个只读常量。</li>
-<li>声明需要立即初始化。</li>
-<li>只在声明的块级作用域内有效</li>
-<li>存在暂时性死区</li>
-<li>块级作用域内不允许重复声明</li>
-</ul>
-<h5 id="解构赋值"><a href="#解构赋值" class="headerlink" title="解构赋值"></a>解构赋值</h5><ul>
-<li><p>解构成功</p>
-<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">let [a, b, c] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</div></pre></td></tr></table></figure>
-</li>
-<li><p>解构不成功</p>
-</li>
-</ul>
-<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">let <span class="string">[bar, foo]</span> = <span class="string">[1]</span>;</div></pre></td></tr></table></figure>
-<ul>
-<li>不完全解构</li>
-</ul>
-<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">let [x, y] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</div></pre></td></tr></table></figure>
-<ul>
-<li>只要某种数据结构具有 Iterator 接口，都可以采用数组形式的解构赋值。</li>
-<li><p>允许默认值</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> [x, y = <span class="string">'b'</span>] = [<span class="string">'a'</span>, <span class="literal">undefined</span>];</div><div class="line"><span class="comment">// x='a', y='b', 必须严格等于undfined</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>对象解构：对象的属性没有次序，变量必须与属性同名，才能取到正确的值</p>
-</li>
-<li><p>用途：</p>
-<ul>
-<li>交换变量的值</li>
-<li>从函数返回多个值</li>
-<li>函数参数的定义</li>
-<li>提取 JSON 数据</li>
-<li>函数参数的默认值</li>
-<li>遍历 Map 结构</li>
-<li>输入模块的指定方法</li>
-</ul>
-<h5 id="字符串拓展"><a href="#字符串拓展" class="headerlink" title="字符串拓展"></a>字符串拓展</h5></li>
-<li><p><strong>模板字符串</strong>（template string）是增强版的字符串，用反引号（`）标识。它可以当作普通字符串使用，也可以用来定义多行字符串，或者在字符串中嵌入变量。</p>
-<figure class="highlight dust"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="xml">$('#result').append(`</span></div><div class="line">  There are <span class="tag">&lt;<span class="name">b</span>&gt;</span>$<span class="template-variable">&#123;basket.count&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">b</span>&gt;</span> items</span></div><div class="line">   in your basket, <span class="tag">&lt;<span class="name">em</span>&gt;</span>$<span class="template-variable">&#123;basket.onSale&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">em</span>&gt;</span></span></div><div class="line">  are on sale!</div><div class="line">`);</div></pre></td></tr></table></figure>
-</li>
-<li><p><strong>charAt()/at()</strong> 前者不能识别大于码点大于0xffff的字符，后者可以。</p>
-</li>
-<li><strong>includes()/startsWith()/endsWith()</strong> 作用与indexOf类似，判断是否包含字符串/以目标字串开始/以目标字串结束</li>
-</ul>
+        <div class="article-info info-on-right">
+          
+          
 
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/img/avatar.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/img/avatar.jpg">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
         </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://tanshizw.com/2018/04/19/ES6-part1/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2018/04/17/What-is-HTML5/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          What is HTML5
-        
-      </div>
-    </a>
   
   
-    <a href="/2018/09/05/How-B2G-talk-to-lower-layer/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">How B2G talk to lower layer</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
+    
 
 
           </div>
@@ -369,8 +206,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

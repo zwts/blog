@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//tanshizw.com">
-  <title>ES6 let/const/解构赋值/模版字符串 | 迎风布阵 逆水行舟</title>
+  <title>How B2G talk to lower layer | 迎风布阵 逆水行舟</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="let 它声明的变量只在let命令所在的代码块内有效。代码块由{}表示。 相较于var不存在变量提升。(undefined, ReferenceError) let命令声明变量之前，该变量都是不可用的。(暂时性死区) 块级作用域内不允许重复声明  const 声明一个只读常量。 声明需要立即初始化。 只在声明的块级作用域内有效 存在暂时性死区 块级作用域内不允许重复声明  解构赋值 解构成功 1l">
+  <meta name="description" content="Android hardware abstraction layer (HAL)gecko/hal/gonk/GonkHal.cppgecko/dom/system/gonk/GonkGPSGelocationProvider.cppgecko/dom/camera/GonkCameraManager.cppUse hw_get_module Android HAL layer Interface">
 <meta name="keywords">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ES6 let/const/解构赋值/模版字符串">
-<meta property="og:url" content="//tanshizw.com/2018/04/19/ES6-part1/index.html">
+<meta property="og:title" content="How B2G talk to lower layer">
+<meta property="og:url" content="//tanshizw.com/2018/09/05/How-B2G-talk-to-lower-layer/index.html">
 <meta property="og:site_name" content="迎风布阵 逆水行舟">
-<meta property="og:description" content="let 它声明的变量只在let命令所在的代码块内有效。代码块由{}表示。 相较于var不存在变量提升。(undefined, ReferenceError) let命令声明变量之前，该变量都是不可用的。(暂时性死区) 块级作用域内不允许重复声明  const 声明一个只读常量。 声明需要立即初始化。 只在声明的块级作用域内有效 存在暂时性死区 块级作用域内不允许重复声明  解构赋值 解构成功 1l">
-<meta property="og:updated_time" content="2018-04-25T09:04:41.000Z">
+<meta property="og:description" content="Android hardware abstraction layer (HAL)gecko/hal/gonk/GonkHal.cppgecko/dom/system/gonk/GonkGPSGelocationProvider.cppgecko/dom/camera/GonkCameraManager.cppUse hw_get_module Android HAL layer Interface">
+<meta property="og:updated_time" content="2018-09-05T03:32:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ES6 let/const/解构赋值/模版字符串">
-<meta name="twitter:description" content="let 它声明的变量只在let命令所在的代码块内有效。代码块由{}表示。 相较于var不存在变量提升。(undefined, ReferenceError) let命令声明变量之前，该变量都是不可用的。(暂时性死区) 块级作用域内不允许重复声明  const 声明一个只读常量。 声明需要立即初始化。 只在声明的块级作用域内有效 存在暂时性死区 块级作用域内不允许重复声明  解构赋值 解构成功 1l">
+<meta name="twitter:title" content="How B2G talk to lower layer">
+<meta name="twitter:description" content="Android hardware abstraction layer (HAL)gecko/hal/gonk/GonkHal.cppgecko/dom/system/gonk/GonkGPSGelocationProvider.cppgecko/dom/camera/GonkCameraManager.cppUse hw_get_module Android HAL layer Interface">
   
     <link rel="alternative" href="/atom.xml" title="迎风布阵 逆水行舟" type="application/atom+xml">
   
@@ -146,76 +146,33 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-ES6-part1" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-How-B2G-talk-to-lower-layer" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      ES6 let/const/解构赋值/模版字符串
+      How B2G talk to lower layer
     </h1>
   
 
         
-        <a href="/2018/04/19/ES6-part1/" class="archive-article-date">
-  	<time datetime="2018-04-19T08:22:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-19</time>
+        <a href="/2018/09/05/How-B2G-talk-to-lower-layer/" class="archive-article-date">
+  	<time datetime="2018-09-05T03:29:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-05</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="let"><a href="#let" class="headerlink" title="let"></a>let</h5><ul>
-<li>它声明的变量只在let命令所在的代码块内有效。代码块由{}表示。</li>
-<li>相较于var不存在变量提升。(undefined, ReferenceError)</li>
-<li>let命令声明变量之前，该变量都是不可用的。(暂时性死区)</li>
-<li>块级作用域内不允许重复声明</li>
-</ul>
-<h5 id="const"><a href="#const" class="headerlink" title="const"></a>const</h5><ul>
-<li>声明一个只读常量。</li>
-<li>声明需要立即初始化。</li>
-<li>只在声明的块级作用域内有效</li>
-<li>存在暂时性死区</li>
-<li>块级作用域内不允许重复声明</li>
-</ul>
-<h5 id="解构赋值"><a href="#解构赋值" class="headerlink" title="解构赋值"></a>解构赋值</h5><ul>
-<li><p>解构成功</p>
-<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">let [a, b, c] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</div></pre></td></tr></table></figure>
-</li>
-<li><p>解构不成功</p>
-</li>
-</ul>
-<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">let <span class="string">[bar, foo]</span> = <span class="string">[1]</span>;</div></pre></td></tr></table></figure>
-<ul>
-<li>不完全解构</li>
-</ul>
-<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">let [x, y] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</div></pre></td></tr></table></figure>
-<ul>
-<li>只要某种数据结构具有 Iterator 接口，都可以采用数组形式的解构赋值。</li>
-<li><p>允许默认值</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> [x, y = <span class="string">'b'</span>] = [<span class="string">'a'</span>, <span class="literal">undefined</span>];</div><div class="line"><span class="comment">// x='a', y='b', 必须严格等于undfined</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>对象解构：对象的属性没有次序，变量必须与属性同名，才能取到正确的值</p>
-</li>
-<li><p>用途：</p>
-<ul>
-<li>交换变量的值</li>
-<li>从函数返回多个值</li>
-<li>函数参数的定义</li>
-<li>提取 JSON 数据</li>
-<li>函数参数的默认值</li>
-<li>遍历 Map 结构</li>
-<li>输入模块的指定方法</li>
-</ul>
-<h5 id="字符串拓展"><a href="#字符串拓展" class="headerlink" title="字符串拓展"></a>字符串拓展</h5></li>
-<li><p><strong>模板字符串</strong>（template string）是增强版的字符串，用反引号（`）标识。它可以当作普通字符串使用，也可以用来定义多行字符串，或者在字符串中嵌入变量。</p>
-<figure class="highlight dust"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="xml">$('#result').append(`</span></div><div class="line">  There are <span class="tag">&lt;<span class="name">b</span>&gt;</span>$<span class="template-variable">&#123;basket.count&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">b</span>&gt;</span> items</span></div><div class="line">   in your basket, <span class="tag">&lt;<span class="name">em</span>&gt;</span>$<span class="template-variable">&#123;basket.onSale&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">em</span>&gt;</span></span></div><div class="line">  are on sale!</div><div class="line">`);</div></pre></td></tr></table></figure>
-</li>
-<li><p><strong>charAt()/at()</strong> 前者不能识别大于码点大于0xffff的字符，后者可以。</p>
-</li>
-<li><strong>includes()/startsWith()/endsWith()</strong> 作用与indexOf类似，判断是否包含字符串/以目标字串开始/以目标字串结束</li>
-</ul>
+        <h5 id="Android-hardware-abstraction-layer-HAL"><a href="#Android-hardware-abstraction-layer-HAL" class="headerlink" title="Android hardware abstraction layer (HAL)"></a>Android hardware abstraction layer (HAL)</h5><p>gecko/hal/gonk/GonkHal.cpp<br>gecko/dom/system/gonk/GonkGPSGelocationProvider.cpp<br>gecko/dom/camera/GonkCameraManager.cpp<br>Use hw_get_module Android HAL layer Interface<br><a href="http://emb.hqyj.com/Column/Column733.htm" target="_blank" rel="external">http://emb.hqyj.com/Column/Column733.htm</a></p>
+<h5 id="Unix-domain-socket"><a href="#Unix-domain-socket" class="headerlink" title="Unix domain socket"></a>Unix domain socket</h5><p>rilproxy/src/rilproxy.c<br>Use socket_local_server connect to rilproxy socket</p>
+<h5 id="Remote-Procedure-Call-RPC-binder"><a href="#Remote-Procedure-Call-RPC-binder" class="headerlink" title="Remote Procedure Call(RPC) / binder"></a>Remote Procedure Call(RPC) / binder</h5><p>gecko/dom/system/gonk/AudioManager.cpp<br>gecko/media/libsydneyaudio/src/gonk/AudioSystem.h<br>frameworks/base/media/libmedia/AudioSystem.cpp<br>Use binder = sm-&gt;getService()<br><a href="https://blog.csdn.net/freekiteyu/article/details/70082302" target="_blank" rel="external">https://blog.csdn.net/freekiteyu/article/details/70082302</a></p>
+<h5 id="Use-‘proc’-‘system’-file-system"><a href="#Use-‘proc’-‘system’-file-system" class="headerlink" title="Use ‘proc’ , ‘system’  file system"></a>Use ‘proc’ , ‘system’  file system</h5><p>gecko/hal/gonk/GonkHal.cpp<br>Use fopen to open battery file node</p>
+<h5 id="Shared-library"><a href="#Shared-library" class="headerlink" title="Shared library"></a>Shared library</h5><p>gecko/dom/wifi/libhardware_legacy.js<br>ctypes.open(“libhardware_legacy.so”);<br><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/js-ctypes/Using_js-ctypes" target="_blank" rel="external">https://developer.mozilla.org/zh-CN/docs/Mozilla/js-ctypes/Using_js-ctypes</a></p>
+<h5 id="System-call"><a href="#System-call" class="headerlink" title="System call"></a>System call</h5><p>gecko/hal/gonk/GonkHal.cpp<br>Use syscall of Linux</p>
+<p>gecko/hal/linux/LinuxPower.cpp<br>Use reboot of Linux<br><a href="https://blog.csdn.net/qingkongyeyue/article/details/71597783" target="_blank" rel="external">https://blog.csdn.net/qingkongyeyue/article/details/71597783</a></p>
 
       
 
@@ -305,7 +262,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://tanshizw.com/2018/04/19/ES6-part1/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://tanshizw.com/2018/09/05/How-B2G-talk-to-lower-layer/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -319,20 +276,15 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/04/17/What-is-HTML5/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/04/19/ES6-part1/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          What is HTML5
+          ES6 let/const/解构赋值/模版字符串
         
       </div>
     </a>
   
-  
-    <a href="/2018/09/05/How-B2G-talk-to-lower-layer/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">How B2G talk to lower layer</div>
-      <i class="icon-circle-right"></i>
-    </a>
   
 </nav>
 

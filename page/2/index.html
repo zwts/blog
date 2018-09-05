@@ -143,6 +143,77 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-FFOS-Part-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/29/FFOS-Part-1/">FFOS Part 1</a>
+    </h1>
+  
+
+        
+        <a href="/2017/11/29/FFOS-Part-1/" class="archive-article-date">
+  	<time datetime="2017-11-29T09:36:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h6 id="Architecture"><a href="#Architecture" class="headerlink" title="Architecture"></a>Architecture</h6><p><strong>Gaia</strong></p>
+<ul>
+<li>Applications and UI</li>
+<li>Third-party application can be installed</li>
+</ul>
+<p><strong>Gecko</strong></p>
+<ul>
+<li>JS Runtime (?)</li>
+<li>APIs</li>
+<li>Consists: network stack, graph stack, layout engine, virtual machine(for JS), porting layers</li>
+</ul>
+<p><strong>Gonk</strong></p>
+<ul>
+<li>Linux Kernel</li>
+<li>Device Drivers</li>
+<li>Hardware Abstraction Layer</li>
+</ul>
+<h6 id="Start-up"><a href="#Start-up" class="headerlink" title="Start up"></a>Start up</h6><ol>
+<li>Primary bootloader (usually show the first flash screen)</li>
+<li>Linux Kernel and Modem</li>
+<li>The end of bootstrapping process modem image loaded.</li>
+<li>The end of kernel startup, userspace “init” process launched</li>
+<li>A ramdisk mounted</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/11/29/FFOS-Part-1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-Ninja-Javascript-Part-6" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -601,56 +672,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/05/15/tip1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-find_missing_libs_cause_compile_error" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/15/find_missing_libs_cause_compile_error/">编译系统找不到某个lib.so库时，便捷寻找方法</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/15/find_missing_libs_cause_compile_error/" class="archive-article-date">
-  	<time datetime="2017-05-15T06:01:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Install apt-file:<br>  <pre><code><br>    sudo apt-get install apt-file<br>    apt-file update<br>    apt-file search libXext.so.6<br>  </code></pre></p>
-<p>libxext6: /usr/lib/x86_64-linux-gnu/libXext.so.6<br>libxext6: /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0<br>libxext6-dbg: /usr/lib/debug/usr/lib/x86_64-linux-gnu/libXext.so.6.4.0</p>
-<p>So:<br>  <pre><code><br>    sudo apt-get install  libxext6<br>  </code></pre></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/15/find_missing_libs_cause_compile_error/">展开全文 >></a>
         </p>
       
 

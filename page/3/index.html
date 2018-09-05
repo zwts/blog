@@ -143,6 +143,56 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-find_missing_libs_cause_compile_error" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/15/find_missing_libs_cause_compile_error/">编译系统找不到某个lib.so库时，便捷寻找方法</a>
+    </h1>
+  
+
+        
+        <a href="/2017/05/15/find_missing_libs_cause_compile_error/" class="archive-article-date">
+  	<time datetime="2017-05-15T06:01:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Install apt-file:<br>  <pre><code><br>    sudo apt-get install apt-file<br>    apt-file update<br>    apt-file search libXext.so.6<br>  </code></pre></p>
+<p>libxext6: /usr/lib/x86_64-linux-gnu/libXext.so.6<br>libxext6: /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0<br>libxext6-dbg: /usr/lib/debug/usr/lib/x86_64-linux-gnu/libXext.so.6.4.0</p>
+<p>So:<br>  <pre><code><br>    sudo apt-get install  libxext6<br>  </code></pre></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/05/15/find_missing_libs_cause_compile_error/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-Unable-to-run-mksdcard-SDK-tool" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
